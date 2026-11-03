@@ -1,0 +1,3457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Commercial Credit and Finance PLC (CSE: COCR.N0000) — Institutional Forensic Equity Research</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <style>
+    :root {
+      --bg-paper: #FAF8F5;
+      --bg-card: #FFFFFF;
+      --bg-subtle: #F4F1EA;
+      --bg-slate: #F8FAFC;
+      --ink-primary: #111827;
+      --ink-secondary: #334155;
+      --ink-muted: #64748B;
+      --border-light: #E2E8F0;
+      --border-strong: #CBD5E1;
+      --navy-accent: #0F172A;
+      --teal-profit: #0D9488;
+      --green-pos: #15803D;
+      --green-bg: #F0FDF4;
+      --amber-rev: #D97706;
+      --amber-bg: #FFFBEB;
+      --crimson-risk: #B91C1C;
+      --crimson-bg: #FEF2F2;
+      --blue-info: #1D4ED8;
+      --blue-bg: #EFF6FF;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--bg-paper);
+      color: var(--ink-primary);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 17.5px;
+      line-height: 1.78;
+    }
+
+    body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      background-color: var(--bg-paper);
+    }
+
+    /* Top Institutional Masthead */
+    .masthead {
+      width: 100%;
+      background: #0F172A;
+      color: #F8FAFC;
+      border-bottom: 3px solid #D97706;
+      padding: 20px 36px;
+    }
+
+    .masthead-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(255,255,255,0.14);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 13.5px;
+      letter-spacing: 0.03em;
+      color: #CBD5E1;
+    }
+
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 11px;
+      border-radius: 4px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12.5px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .badge-amber { background: rgba(217, 119, 6, 0.22); color: #FBBF24; border: 1px solid rgba(251, 191, 36, 0.4); }
+    .badge-teal { background: rgba(13, 148, 136, 0.25); color: #5EEAD4; border: 1px solid rgba(94, 234, 212, 0.4); }
+    .badge-crimson { background: rgba(185, 28, 28, 0.28); color: #FCA5A5; border: 1px solid rgba(252, 165, 165, 0.4); }
+
+    .masthead-main {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 24px;
+      padding-top: 18px;
+    }
+
+    .masthead-title-block {
+      flex: 1;
+      min-width: 520px;
+    }
+
+    .masthead-title {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 1.18;
+      color: #FFFFFF;
+      margin-bottom: 8px;
+    }
+
+    .masthead-subtitle {
+      font-size: 16.5px;
+      color: #CBD5E1;
+      line-height: 1.55;
+      max-width: 1180px;
+    }
+
+    .price-basis-box {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 6px;
+      padding: 12px 16px;
+      min-width: 390px;
+    }
+
+    .price-basis-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #94A3B8;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .basis-btn-group {
+      display: flex;
+      gap: 6px;
+    }
+
+    .basis-btn {
+      flex: 1;
+      background: rgba(15, 23, 42, 0.75);
+      color: #E2E8F0;
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 7px 10px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12.5px;
+      font-weight: 500;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      text-align: center;
+    }
+
+    .basis-btn:hover {
+      background: rgba(255,255,255,0.12);
+    }
+
+    .basis-btn.active {
+      background: #D97706;
+      color: #FFFFFF;
+      border-color: #F59E0B;
+      font-weight: 600;
+    }
+
+    /* Key Metrics Strip */
+    .kpi-strip {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      background: #FFFFFF;
+      border-bottom: 2px solid var(--border-strong);
+      padding: 0 36px;
+    }
+
+    .kpi-cell {
+      padding: 15px 16px;
+      border-right: 1px solid var(--border-light);
+    }
+
+    .kpi-cell:last-child {
+      border-right: none;
+    }
+
+    .kpi-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+
+    .kpi-val {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--ink-primary);
+      line-height: 1.25;
+    }
+
+    .kpi-sub {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12.5px;
+      color: var(--ink-secondary);
+      margin-top: 3px;
+    }
+
+    /* Full-Screen PC Two-Column Editorial Workspace */
+    .workspace-container {
+      display: flex;
+      align-items: flex-start;
+      width: 100%;
+      max-width: 100%;
+      padding: 28px 36px 64px 36px;
+      gap: 34px;
+    }
+
+    /* Sticky Left Sidebar: TOC + Filings + Acronyms Panel */
+    .left-sidebar {
+      width: 315px;
+      min-width: 315px;
+      position: sticky;
+      top: 18px;
+      max-height: calc(100vh - 36px);
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding-right: 4px;
+    }
+
+    .left-sidebar::-webkit-scrollbar {
+      width: 6px;
+    }
+    .left-sidebar::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 3px;
+    }
+
+    .sidebar-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-strong);
+      border-radius: 6px;
+      padding: 16px 18px;
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.03);
+    }
+
+    .sidebar-heading {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--navy-accent);
+      padding-bottom: 9px;
+      margin-bottom: 10px;
+      border-bottom: 2px solid var(--navy-accent);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .toc-link {
+      display: flex;
+      align-items: baseline;
+      gap: 9px;
+      text-decoration: none;
+      color: var(--ink-secondary);
+      font-size: 14px;
+      font-weight: 500;
+      padding: 6px 8px;
+      border-radius: 4px;
+      line-height: 1.35;
+      transition: all 0.12s ease;
+    }
+
+    .toc-link:hover, .toc-link.active {
+      background: var(--bg-subtle);
+      color: var(--navy-accent);
+      font-weight: 600;
+    }
+
+    .toc-num {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--amber-rev);
+      min-width: 22px;
+    }
+
+    .filing-item {
+      font-size: 13px;
+      line-height: 1.45;
+      padding: 7px 0;
+      border-bottom: 1px dashed var(--border-light);
+      color: var(--ink-secondary);
+    }
+    .filing-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .filing-tag {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--teal-profit);
+      display: block;
+    }
+
+    /* Dedicated Acronyms & Financial Glossary Reference Panel at Bottom of Left Sidebar */
+    .acronym-panel {
+      background: #FFFFFF;
+      border: 2px solid #0F172A;
+      border-radius: 6px;
+      padding: 15px 16px;
+    }
+
+    .acronym-search {
+      width: 100%;
+      padding: 7px 10px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 13px;
+      border: 1px solid var(--border-strong);
+      border-radius: 4px;
+      background: var(--bg-paper);
+      color: var(--ink-primary);
+      margin-bottom: 10px;
+    }
+
+    .acronym-search:focus {
+      outline: 2px solid var(--amber-rev);
+      border-color: transparent;
+    }
+
+    .acronym-cat-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-bottom: 10px;
+    }
+
+    .acronym-cat-btn {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 7px;
+      border-radius: 3px;
+      border: 1px solid var(--border-strong);
+      background: var(--bg-slate);
+      color: var(--ink-secondary);
+      cursor: pointer;
+    }
+
+    .acronym-cat-btn.active {
+      background: var(--navy-accent);
+      color: #FFFFFF;
+      border-color: var(--navy-accent);
+    }
+
+    .acronym-list {
+      max-height: 360px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding-right: 4px;
+    }
+
+    .acronym-list::-webkit-scrollbar {
+      width: 5px;
+    }
+    .acronym-list::-webkit-scrollbar-thumb {
+      background: #94A3B8;
+      border-radius: 3px;
+    }
+
+    .acronym-entry {
+      padding: 8px 9px;
+      background: var(--bg-paper);
+      border: 1px solid var(--border-light);
+      border-left: 3px solid var(--amber-rev);
+      border-radius: 4px;
+      font-size: 13px;
+      line-height: 1.42;
+    }
+
+    .acronym-entry.cat-macro { border-left-color: #1D4ED8; }
+    .acronym-entry.cat-credit { border-left-color: #B91C1C; }
+    .acronym-entry.cat-val { border-left-color: #0D9488; }
+    .acronym-entry.cat-reg { border-left-color: #7C3AED; }
+
+    .acronym-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 6px;
+      margin-bottom: 2px;
+    }
+
+    .acronym-code {
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: 700;
+      font-size: 13.5px;
+      color: var(--navy-accent);
+    }
+
+    .acronym-full {
+      font-weight: 600;
+      color: var(--ink-primary);
+      font-size: 12.8px;
+    }
+
+    .acronym-desc {
+      color: var(--ink-secondary);
+      font-size: 12.3px;
+      margin-top: 2px;
+    }
+
+    /* Main Content Column */
+    .main-editorial {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+    }
+
+    .report-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border-strong);
+      border-radius: 6px;
+      padding: 34px 40px;
+      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.03);
+    }
+
+    .section-header {
+      border-bottom: 2px solid var(--navy-accent);
+      padding-bottom: 14px;
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .section-title-wrap {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+    }
+
+    .section-num {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 16px;
+      font-weight: 700;
+      color: #FFFFFF;
+      background: var(--navy-accent);
+      padding: 3px 10px;
+      border-radius: 4px;
+    }
+
+    h2.section-title {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 29px;
+      font-weight: 700;
+      color: var(--ink-primary);
+      line-height: 1.25;
+    }
+
+    .section-meta {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12.5px;
+      color: var(--ink-muted);
+      background: var(--bg-slate);
+      padding: 4px 10px;
+      border-radius: 4px;
+      border: 1px solid var(--border-light);
+    }
+
+    h3.sub-heading {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--navy-accent);
+      margin: 26px 0 12px 0;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    p {
+      margin-bottom: 18px;
+      color: var(--ink-primary);
+      font-size: 17.5px;
+      line-height: 1.8;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Editorial Callout Boxes */
+    .callout {
+      padding: 20px 24px;
+      border-radius: 6px;
+      margin: 22px 0;
+      border: 1px solid var(--border-light);
+      border-left-width: 5px;
+    }
+
+    .callout-title {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .callout-amber { background: var(--amber-bg); border-left-color: var(--amber-rev); }
+    .callout-amber .callout-title { color: #92400E; }
+
+    .callout-crimson { background: var(--crimson-bg); border-left-color: var(--crimson-risk); }
+    .callout-crimson .callout-title { color: var(--crimson-risk); }
+
+    .callout-teal { background: var(--green-bg); border-left-color: var(--teal-profit); }
+    .callout-teal .callout-title { color: var(--green-pos); }
+
+    .callout-blue { background: var(--blue-bg); border-left-color: var(--blue-info); }
+    .callout-blue .callout-title { color: var(--blue-info); }
+
+    /* High-Readability Financial Data Tables */
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      margin: 20px 0 24px 0;
+      border: 1px solid var(--border-strong);
+      border-radius: 6px;
+      background: #FFFFFF;
+    }
+
+    table.fin-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 14.5px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    table.fin-table th {
+      background: #F1F5F9;
+      color: var(--navy-accent);
+      font-weight: 700;
+      text-align: right;
+      padding: 13px 16px;
+      border-bottom: 2px solid var(--border-strong);
+      border-right: 1px solid var(--border-light);
+      white-space: nowrap;
+      font-size: 13.5px;
+    }
+
+    table.fin-table th:first-child,
+    table.fin-table td:first-child {
+      text-align: left;
+      position: sticky;
+      left: 0;
+      background: inherit;
+      z-index: 1;
+    }
+
+    table.fin-table th:first-child {
+      background: #F1F5F9;
+      z-index: 2;
+    }
+
+    table.fin-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border-light);
+      border-right: 1px solid var(--border-light);
+      text-align: right;
+      color: var(--ink-primary);
+      background: #FFFFFF;
+    }
+
+    table.fin-table tr:nth-child(even) td {
+      background: #FAFBFD;
+    }
+
+    table.fin-table tr.row-total td {
+      background: #F1F5F9;
+      font-weight: 700;
+      border-top: 2px solid #94A3B8;
+      border-bottom: 2px solid #94A3B8;
+      color: var(--navy-accent);
+    }
+
+    table.fin-table tr.row-highlight td {
+      background: #FEF3C7;
+      font-weight: 700;
+      color: #78350F;
+    }
+
+    table.fin-table tr.row-alert td {
+      background: #FEE2E2;
+      font-weight: 700;
+      color: #991B1B;
+    }
+
+    table.fin-table tr.row-green td {
+      background: #DCFCE7;
+      font-weight: 700;
+      color: #14532D;
+    }
+
+    .num-pos { color: var(--green-pos); font-weight: 600; }
+    .num-neg { color: var(--crimson-risk); font-weight: 600; }
+    .num-warn { color: var(--amber-rev); font-weight: 600; }
+
+    /* Interactive Controls & Period Switcher */
+    .control-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      background: var(--bg-subtle);
+      padding: 14px 18px;
+      border-radius: 6px;
+      border: 1px solid var(--border-strong);
+      margin-bottom: 18px;
+    }
+
+    .switcher-group {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .sw-btn {
+      padding: 8px 15px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 13.5px;
+      font-weight: 600;
+      border: 1px solid var(--border-strong);
+      background: #FFFFFF;
+      color: var(--ink-secondary);
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .sw-btn:hover {
+      border-color: var(--navy-accent);
+      color: var(--navy-accent);
+    }
+
+    .sw-btn.active {
+      background: var(--navy-accent);
+      color: #FFFFFF;
+      border-color: var(--navy-accent);
+    }
+
+    /* Two-column and Three-column grids inside main content */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin: 20px 0;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .stat-card {
+      background: var(--bg-paper);
+      border: 1px solid var(--border-strong);
+      border-radius: 6px;
+      padding: 20px 22px;
+    }
+
+    .stat-card-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12.5px;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .stat-card-val {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--navy-accent);
+      margin-bottom: 6px;
+    }
+
+    .stat-card-desc {
+      font-size: 15px;
+      color: var(--ink-secondary);
+      line-height: 1.55;
+    }
+
+    .chart-box {
+      background: #FFFFFF;
+      border: 1px solid var(--border-strong);
+      border-radius: 6px;
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+
+    .chart-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .chart-title {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--navy-accent);
+    }
+
+    .chart-subtitle {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12.5px;
+      color: var(--ink-muted);
+    }
+
+    .canvas-holder {
+      position: relative;
+      width: 100%;
+      height: 360px;
+    }
+
+    /* SVG Sankey Container */
+    .sankey-wrapper {
+      width: 100%;
+      background: #FFFFFF;
+      border: 1px solid var(--border-strong);
+      border-radius: 6px;
+      padding: 22px;
+      margin: 18px 0 24px 0;
+      overflow-x: auto;
+    }
+
+    /* Interactive Valuation Sliders */
+    .val-control-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      background: var(--bg-subtle);
+      padding: 20px 24px;
+      border-radius: 6px;
+      border: 1px solid var(--border-strong);
+      margin: 20px 0;
+    }
+
+    .slider-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .slider-top {
+      display: flex;
+      justify-content: space-between;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 13.5px;
+      font-weight: 600;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      accent-color: var(--navy-accent);
+      cursor: pointer;
+    }
+
+    /* Bullet Lists */
+    ul.forensic-list {
+      margin: 14px 0 20px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    ul.forensic-list li {
+      font-size: 17px;
+      line-height: 1.75;
+      color: var(--ink-primary);
+    }
+
+    a.ext-link {
+      color: var(--blue-info);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      font-weight: 500;
+    }
+
+    a.ext-link:hover {
+      color: var(--navy-accent);
+    }
+
+    .table-wrap {
+      -webkit-overflow-scrolling: touch;
+    }
+    table.fin-table {
+      min-width: 720px;
+    }
+    table.fin-table.text-last-col th:last-child,
+    table.fin-table.text-last-col td:last-child {
+      text-align: left;
+    }
+    table.fin-table.text-col-2 th:nth-child(2),
+    table.fin-table.text-col-2 td:nth-child(2) {
+      text-align: left;
+    }
+    .sankey-wrapper {
+      -webkit-overflow-scrolling: touch;
+    }
+    .sankey-wrapper svg {
+      width: 100%;
+      min-width: 820px;
+      height: auto !important;
+      display: block;
+    }
+    @media (max-width: 1280px) {
+      .kpi-strip { grid-template-columns: repeat(4, 1fr); padding: 0 20px; }
+      .kpi-cell { border-bottom: 1px solid var(--border-light); }
+      .workspace-container { flex-direction: column; padding: 20px 20px 48px 20px; gap: 24px; }
+      .left-sidebar { width: 100%; min-width: 0; position: static; max-height: none; }
+      .toc-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 6px; }
+      .acronym-list { max-height: 220px; }
+      .grid-2, .grid-3, .val-control-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 900px) {
+      .masthead { padding: 18px 20px; }
+      .masthead-title-block { min-width: 0; width: 100%; }
+      .masthead-title { font-size: 26px; }
+      .price-basis-box { min-width: 0; width: 100%; }
+      .basis-btn-group { flex-wrap: wrap; }
+      .basis-btn { flex: 1 1 calc(50% - 6px); }
+      .report-section { padding: 22px 20px; }
+      h2.section-title { font-size: 23px; }
+      table.fin-table th:first-child,
+      table.fin-table td:first-child {
+        position: static;
+      }
+    }
+    @media (max-width: 640px) {
+      .masthead { padding: 14px 14px; }
+      .masthead-title { font-size: 22px; }
+      .masthead-subtitle { font-size: 14.5px; }
+      .kpi-strip { grid-template-columns: repeat(2, 1fr); padding: 0 12px; }
+      .kpi-val { font-size: 17px; }
+      .workspace-container { padding: 14px 12px 36px 12px; }
+      .report-section { padding: 16px 14px; }
+      p, ul.forensic-list li { font-size: 15.5px; line-height: 1.68; }
+      .callout { padding: 14px 16px; }
+      .toc-list { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP INSTITUTIONAL MASTHEAD -->
+  <header class="masthead">
+    <div class="masthead-top">
+      <div>
+        <span class="badge-pill badge-amber">CSE: COCR.N0000</span>
+        <span class="badge-pill badge-teal">LICENSED FINANCE COMPANY (CBSL)</span>
+        <span class="badge-pill badge-crimson">LRA RATING: BBB+ (STABLE)</span>
+      </div>
+      <div>
+        UPDATED FOR 2Q / 1H FY2026/27 INTERIM (30 SEP 2026, FILED 30 OCT 2026) • 1Q FY27 INTERIM • FY25/26 AR (292p)
+      </div>
+    </div>
+
+    <div class="masthead-main">
+      <div class="masthead-title-block">
+        <h1 class="masthead-title">Commercial Credit and Finance PLC — 2Q / 1H FY2026/27 Forensic Update</h1>
+        <div class="masthead-subtitle">
+          Post-2Q27 Drop Deep Dive (30 Sep 2026): Auditing the LKR 1.80 Bn 1H27 Impairment Swing, Sequential QoQ Credit-Cost Improvement (-9.5% QoQ to LKR 402 Mn), +43.3% Finance Lease Revenue Boom, TVS Lanka’s LKR 705 Mn 1H27 Contribution, +LKR 7.42 Bn Operating Cash Flow Turnaround, and the Official Post-Group Lease 49.00% Free-Float Registry.
+        </div>
+      </div>
+
+      <div class="price-basis-box">
+        <span class="price-basis-label">Toggle Reference Share Price Basis (318,074,365 Shares):</span>
+        <div class="basis-btn-group">
+          <button class="basis-btn active" onclick="setPriceBasis(96.70, '2Q27 Filing Close — 30 Sep 2026', this)">LKR 96.70 (2Q27)</button>
+          <button class="basis-btn" onclick="setPriceBasis(100.00, 'Sep 2026 Post-Crossing / Ex-Div', this)">LKR 100.00 (Sep '26)</button>
+          <button class="basis-btn" onclick="setPriceBasis(90.20, 'Oct 2026 TradingView Spot', this)">LKR 90.20 (Oct '26)</button>
+          <button class="basis-btn" onclick="setPriceBasis(120.00, '1Q27 Filing Close — 30 Jun 2026', this)">LKR 120.00 (1Q27)</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- DYNAMIC 8-CELL KPI STRIP -->
+  <section class="kpi-strip">
+    <div class="kpi-cell">
+      <div class="kpi-label">Reference Price</div>
+      <div class="kpi-val" id="kpi-price">LKR 96.70</div>
+      <div class="kpi-sub" id="kpi-price-sub">2Q27 Close (30 Sep 2026)</div>
+    </div>
+    <div class="kpi-cell">
+      <div class="kpi-label">Market Capitalization</div>
+      <div class="kpi-val" id="kpi-mcap">LKR 30.76 Bn</div>
+      <div class="kpi-sub">Float MCap: LKR 15.07 Bn (49.0% Float)</div>
+    </div>
+    <div class="kpi-cell">
+      <div class="kpi-label">All-Time High &amp; Drawdown</div>
+      <div class="kpi-val" id="kpi-dd">-33.43%</div>
+      <div class="kpi-sub">ATH: LKR 145.25 (30 Sep 2025)</div>
+    </div>
+    <div class="kpi-cell">
+      <div class="kpi-label">Parent P/E (FY26 / 1H27 Ann.)</div>
+      <div class="kpi-val" id="kpi-pe">3.15x / 4.05x</div>
+      <div class="kpi-sub">1H27 Ann. EPS 23.85 | 2Q27 EPS 5.41</div>
+    </div>
+    <div class="kpi-cell">
+      <div class="kpi-label">Price / Book (2Q27 NAVPS)</div>
+      <div class="kpi-val" id="kpi-pbv">0.83x</div>
+      <div class="kpi-sub">Group NAVPS: LKR 115.97 (Ex-LKR 7 Div)</div>
+    </div>
+    <div class="kpi-cell">
+      <div class="kpi-label">Return on Equity (ROE)</div>
+      <div class="kpi-val">20.74% / 30.1%</div>
+      <div class="kpi-sub">1H27 Annualized | FY26 Audited</div>
+    </div>
+    <div class="kpi-cell">
+      <div class="kpi-label">Dividend &amp; Yield (Paid 1H27)</div>
+      <div class="kpi-val" id="kpi-div">10.34%</div>
+      <div class="kpi-sub">DPS: LKR 10.00 (LKR 3.18 Bn Paid)</div>
+    </div>
+    <div class="kpi-cell">
+      <div class="kpi-label">Public Free Float (30 Sep '26)</div>
+      <div class="kpi-val" style="color: var(--green-pos);">49.00% (10,151)</div>
+      <div class="kpi-sub">Up from 19.01% after GLH 29.99% Exit</div>
+    </div>
+  </section>
+
+  <!-- FULL-WIDTH DESKTOP WORKSPACE -->
+  <div class="workspace-container">
+
+    <!-- STICKY LEFT SIDEBAR: TOC + FILINGS + ACRONYM GLOSSARY -->
+    <aside class="left-sidebar">
+      <div class="sidebar-card">
+        <div class="sidebar-heading">
+          <span>Report Navigation</span>
+          <span>01 — 09</span>
+        </div>
+        <ul class="toc-list">
+          <li><a class="toc-link active" href="#sec-01"><span class="toc-num">01</span><span>Executive Thesis &amp; Forensic Score</span></a></li>
+          <li><a class="toc-link" href="#sec-02"><span class="toc-num">02</span><span>SVG Sankey &amp; Group Ecosystem</span></a></li>
+          <li><a class="toc-link" href="#sec-03"><span class="toc-num">03</span><span>10-Year Trajectory &amp; Re-Rating</span></a></li>
+          <li><a class="toc-link" href="#sec-04"><span class="toc-num">04</span><span>Headline vs. Reality (ECL Audit)</span></a></li>
+          <li><a class="toc-link" href="#sec-05"><span class="toc-num">05</span><span>Scorecard A: NBFI Core &amp; Funding</span></a></li>
+          <li><a class="toc-link" href="#sec-06"><span class="toc-num">06</span><span>Debt, RPTs &amp; TVS Lanka Audit</span></a></li>
+          <li><a class="toc-link" href="#sec-07"><span class="toc-num">07</span><span>CSE NBFI Peer Benchmark</span></a></li>
+          <li><a class="toc-link" href="#sec-08"><span class="toc-num">08</span><span>Interactive Valuation Model</span></a></li>
+          <li><a class="toc-link" href="#sec-09"><span class="toc-num">09</span><span>Red/Green Flags &amp; Falsifiers</span></a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-heading">
+          <span>Primary Sources Audited</span>
+          <span>6 Filings</span>
+        </div>
+        <div class="filing-item">
+          <span class="filing-tag">2Q / 1H FY2026/27 INTERIM (16 PAGES)</span>
+          Unaudited Group &amp; Company FS for 3M &amp; 6M ended 30 Sep 2026 (Signed 30 Oct 2026).
+        </div>
+        <div class="filing-item">
+          <span class="filing-tag">1Q FY2026/27 INTERIM (16 PAGES)</span>
+          Unaudited Group &amp; Company FS for 3M ended 30 June 2026 (Signed 27 Jul 2026).
+        </div>
+        <div class="filing-item">
+          <span class="filing-tag">FY2025/26 ANNUAL REPORT (292 PAGES)</span>
+          Audited FS ended 31 March 2026 (Ernst &amp; Young Unmodified Opinion, 30 Jun 2026).
+        </div>
+        <div class="filing-item">
+          <span class="filing-tag">FY2023/24 ANNUAL REPORT (216 PAGES)</span>
+          Audited FS ended 31 March 2024 + 10-Year Historical Summary (FY2014/15–FY2023/24).
+        </div>
+        <div class="filing-item">
+          <span class="filing-tag">CSE TIER-2 FILING (15 OCT 2026)</span>
+          Section 8 disclosure of LKR 1.00 Bn 5-Year Unsecured Subordinated Tier-2 Loan.
+        </div>
+        <div class="filing-item">
+          <span class="filing-tag">BROKER &amp; MARKET DATA (SEP–OCT 2026)</span>
+          First Capital Research (15 Sep 2026) on Aug 2026 Group Lease 29.99% exit &amp; TradingView CSELK.
+        </div>
+      </div>
+
+      <!-- MANDATORY ACRONYMS & FINANCIAL GLOSSARY PANEL AT BOTTOM OF SIDEBAR -->
+      <div class="acronym-panel">
+        <div class="sidebar-heading" style="margin-bottom: 8px;">
+          <span>Acronyms &amp; Glossary</span>
+          <span id="acronym-count">32 Terms</span>
+        </div>
+        <input type="text" id="acronym-search-input" class="acronym-search" placeholder="Filter e.g. AWLR, ROE, ECL, CAR..." oninput="filterAcronyms()" />
+        <div class="acronym-cat-bar">
+          <button class="acronym-cat-btn active" onclick="setAcronymCat('all', this)">All</button>
+          <button class="acronym-cat-btn" onclick="setAcronymCat('macro', this)">Macro/Rates</button>
+          <button class="acronym-cat-btn" onclick="setAcronymCat('val', this)">Profit/Val</button>
+          <button class="acronym-cat-btn" onclick="setAcronymCat('credit', this)">Credit/ECL</button>
+          <button class="acronym-cat-btn" onclick="setAcronymCat('reg', this)">Reg/Tax</button>
+        </div>
+        <div class="acronym-list" id="acronym-list-container">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN EDITORIAL COLUMN -->
+    <main class="main-editorial">
+
+      <!-- =====================================================================
+           SECTION 01: EXECUTIVE THESIS & VERDICT
+           ===================================================================== -->
+      <section class="report-section" id="sec-01">
+        <div class="section-header">
+          <div class="section-title-wrap">
+            <span class="section-num">01</span>
+            <h2 class="section-title">Executive Thesis, Dual-Price Reconciliation &amp; Forensic Quality Score (84/100)</h2>
+          </div>
+          <span class="section-meta">Scope: Consolidated Group &amp; Company | 100% Parent Attributable (Zero NCI)</span>
+        </div>
+
+        <div class="callout callout-teal" style="margin-top: 0; margin-bottom: 24px;">
+          <div class="callout-title">🔥 2Q / 1H FY2026/27 Flash Forensic Verdict (Quarter Ended 30 Sep 2026, Released 30 Oct 2026)</div>
+          <p style="font-size: 16.5px; margin-bottom: 10px;">
+            <strong>What to make of the 2Q FY2026/27 drop? Don't be fooled by the optical -18.1% YoY dip in 2Q Group PAT (to LKR 1,720.24 Mn; EPS LKR 5.41) or -10.4% YoY dip in 1H Group PAT (to LKR 3,792.28 Mn; EPS LKR 11.92; Annualized EPS LKR 23.85).</strong> The 30 September 2026 filing (<a class="ext-link" href="https://cdn.cse.lk/cmt/upload_report_file/1063_1793351104044.pdf" target="_blank">CSE 2Q27 Interim PDF</a>) validates our exact forensic thesis from 1Q27 while delivering four major balance-sheet and cash-flow upgrades:
+          </p>
+          <ul class="forensic-list" style="margin-bottom: 10px; font-size: 16px;">
+            <li><strong>1. The -18% YoY Earnings Drop Is 100% Due to Last Year’s Impairment Reversal Base Effect:</strong> In 2Q FY25/26, COCR booked a one-off <strong>+LKR 392.22 Mn impairment reversal credit</strong>; in 2Q FY26/27, it booked a normal <strong>-LKR 401.97 Mn impairment charge</strong>—a <strong>-LKR 794.19 Mn YoY swing</strong> (-LKR 1,803.19 Mn across 1H27). Crucially, on a sequential QoQ basis, <strong>credit costs improved by -9.47% QoQ</strong> (dropping from -LKR 444.00 Mn in 1Q27 to -LKR 401.97 Mn in 2Q27, or ~1.66% annualized Cost of Risk)!</li>
+            <li><strong>2. Core Top-Line &amp; Leasing Momentum Accelerated:</strong> 2Q27 Group Gross Income rose <strong>+18.53% YoY to LKR 9,440.67 Mn</strong> (+1.0% QoQ), Net Interest Income rose <strong>+10.92% YoY to LKR 5,817.97 Mn</strong> (+0.5% QoQ), and bad-debt recoveries kept Other Operating Income up <strong>+71.71% YoY at LKR 426.68 Mn</strong>. Across 1H27, Finance Lease revenue jumped <strong>+43.29% YoY to LKR 13,184.59 Mn</strong> as the lease book expanded +29.0% YoY to LKR 66.92 Bn.</li>
+            <li><strong>3. Massive +LKR 16.88 Bn Operating Cash Flow &amp; Deposit Turnaround:</strong> Customer Deposits surged <strong>+9.38% (+LKR 5,175.84 Mn) in 6 months to LKR 60,378.54 Mn</strong> (+5.80% QoQ in 2Q27 alone), allowing COCR to generate <strong>+LKR 12,082.04 Mn in cash from operations</strong> (+LKR 7,419.10 Mn net of LKR 4.62 Bn taxes paid), pay out <strong>LKR 3,180.74 Mn (LKR 10.00/sh) in cash dividends</strong>, reduce bank debt by LKR 2.29 Bn vs. March 2026, and pile up <strong>LKR 9,084.76 Mn in Treasury Reverse Repos</strong>!</li>
+            <li><strong>4. Official Post-Crossing Registry Confirms 49.00% Free Float &amp; Institutional Entry:</strong> Note 9 (p. 14) confirms Group Lease Holdings (29.99%) has completely exited, lifting Public Shareholding from 19.01% to <strong>49.00% (10,151 shareholders)</strong>, with premier funds like <strong>JB Vantage Value Equity Fund (1.05%)</strong>, <strong>CAL Quantitative Equity Fund (1.27%)</strong>, and <strong>Acadian Frontier Markets Equity Fund (0.67%)</strong> joining the Top 20.</li>
+          </ul>
+          <div style="background: #FEF3C7; border-left: 4px solid #D97706; padding: 10px 14px; border-radius: 4px; font-size: 15px; color: #78350F;">
+            <strong>💡 Plain-Speak Clue (Why NAVPS Dipped from LKR 117.56 in 1Q27 to LKR 115.97 in 2Q27):</strong> Don't panic seeing Group Book Value per share edge down by LKR 1.59 between June and September 2026! In September 2026, COCR paid out its <strong>LKR 7.00/share final cash dividend</strong> directly into shareholders' bank accounts while earning <strong>LKR 5.41/share</strong> in 2Q27 profit (<code>117.56 − 7.00 + 5.41 = LKR 115.97</code>). At <strong>LKR 96.70</strong> (30 Sep close) or <strong>LKR 90.20</strong> (Oct spot), the market prices this 20.7%–22.5% ROE franchise at <strong>0.78x–0.83x Book Value</strong> and <strong>3.78x–4.05x annualized earnings</strong>.
+          </div>
+        </div>
+
+        <p>
+          <strong>Commercial Credit and Finance PLC (<a class="ext-link" href="https://www.tradingview.com/symbols/CSELK-COCR.N0000/" target="_blank">CSE: COCR.N0000</a>)</strong> is one of Sri Lanka’s largest and most profitable Licensed Finance Companies (NBFIs), operating <strong>133 branches</strong> and employing <strong>3,355 staff</strong> across all nine provinces with a total asset base of <strong>LKR 132.43 Bn</strong> as at 30 September 2026 (up from <strong>LKR 129.60 Bn</strong> at 30 June 2026 and <strong>LKR 132.07 Bn</strong> at 31 March 2026). Unlike multi-tiered CSE conglomerates where 25%–45% of consolidated profit leaks out to minority shareholders, <strong>100.0% of Commercial Credit’s consolidated profit and equity belongs to ordinary shareholders of the parent</strong> (zero Non-Controlling Interest leakage), because its insurance broking subsidiary is 100% owned and its high-performing vehicle distribution affiliate—<strong>TVS Lanka (Pvt) Ltd</strong>—is equity-accounted as a <strong>19.5%-owned Associate</strong>.
+        </p>
+
+        <p>
+          Over the four years following Sri Lanka’s 2022 sovereign debt crisis and interest-rate shock, <code>COCR.N0000</code> staged one of the most dramatic fundamental and market re-ratings on the Colombo Stock Exchange—rising <strong>+545.6%</strong> from its FY2022/23 crisis trough of <strong>LKR 22.50</strong> to an All-Time High (ATH) of <strong>LKR 145.25</strong> on 30 September 2025 (and a 4Q FY25/26 high of <strong>LKR 140.00</strong>). At the end of 1Q FY2026/27 (30 June 2026), the stock closed at <strong>LKR 120.00</strong> (Market Cap <strong>LKR 38.17 Bn</strong>). Subsequently, between August and October 2026—following the landmark <strong>August 2026 block divestment of Group Lease Holdings Pte Ltd’s (In Liquidation) 29.99% stake (95.39 Mn shares) for over LKR 9.0 Bn (~LKR 94.35/share)</strong> (<a class="ext-link" href="https://firstcapital.lk/wp-content/uploads/2026/09/COCR-Earnings-Update-MAINTAIN-BUY-15-09-2026.pdf" target="_blank">First Capital Research, 15 Sep 2026</a>) and the <strong>LKR 7.00/share final cash dividend</strong> approved at the 1 September 2026 AGM (<a class="ext-link" href="https://cdn.cse.lk/cmt/announcement_portal_prod/CSE%20Announcement%20_8349873210259891.pdf" target="_blank">CSE Dividend Filing, 31 Jul 2026</a>)—the stock settled into the <strong>LKR 90.20 – LKR 100.00</strong> range (Market Cap <strong>LKR 28.69 Bn – LKR 31.81 Bn</strong>).
+        </p>
+
+        <div class="callout callout-amber">
+          <div class="callout-title">Core Forensic Finding — Why Headline FY26 PAT (+58.7% to LKR 9.75 Bn) Must Be Separated From Core Run-Rate Earnings</div>
+          <p style="font-size: 16.5px; margin-bottom: 10px;">
+            On the surface, Commercial Credit reported record audited Group Profit After Tax (PAT) of <strong>LKR 9,752.82 Mn</strong> in FY2025/26 (Basic EPS: <strong>LKR 30.66</strong>, ROE: <strong>30.09%</strong>), up <strong>+58.66% YoY</strong> from LKR 6,147.09 Mn in FY2024/25. However, a note-level forensic audit of <strong>Note 39 (p. 228)</strong>, <strong>Note 10.1 (p. 184)</strong>, and <strong>Note 11.1 (p. 190)</strong> reveals that <strong>105.1% of the entire YoY increase in Operating Profit before VAT/SSCL (+LKR 6,284.25 Mn) came from a single accounting lever</strong>:
+          </p>
+          <ul class="forensic-list" style="margin-bottom: 0;">
+            <li><strong>The LKR 6,607.02 Mn YoY Impairment Swing:</strong> In FY2024/25, COCR recorded a net impairment expense of <strong>-LKR 1,651.89 Mn</strong>. In FY2025/26, COCR booked a massive <strong>net impairment REVERSAL (credit to income) of +LKR 4,955.13 Mn</strong> (+LKR 4,347.24 Mn on Lease/HP and +LKR 636.09 Mn on Loans).</li>
+            <li><strong>-96.29% Release of Management Overlays:</strong> How was that LKR 4.96 Bn credit generated? Management slashed its Post-Model Adjustment (<strong>"Management Overlays"</strong>) from <strong>LKR 5,429.76 Mn</strong> in FY25 (LKR 718.47 Mn on Loans + LKR 4,711.29 Mn on Leases) down to just <strong>LKR 201.66 Mn</strong> in FY26 (LKR 15.58 Mn on Loans + LKR 186.08 Mn on Leases)—releasing <strong>LKR 5,228.11 Mn</strong> of prior crisis provisions while simultaneously writing off <strong>LKR 5,599.67 Mn</strong> of Stage 3 bad contracts against the allowance!</li>
+            <li><strong>1Q FY2026/27 Proves Underlying Core Resilience:</strong> Now that Management Overlays sit at just LKR 201.66 Mn (0.20% of the loan book), the one-off reversal engine is exhausted. In <strong>1Q FY2026/27 (ended 30 June 2026)</strong>, credit costs normalized to a <strong>-LKR 444.00 Mn charge</strong> (vs. a +LKR 565.00 Mn reversal in 1Q FY25/26—a <strong>-LKR 1,009.00 Mn YoY headwind</strong>). Yet 1Q FY27 Group PAT declined by only <strong>-2.70% YoY to LKR 2,072.04 Mn</strong> (Quarterly EPS <strong>LKR 6.51</strong>; Annualized EPS <strong>LKR 26.06</strong>; Annualized ROE <strong>22.50%</strong>) because <strong>Pre-Impairment Operating Profit grew +8.20% YoY to LKR 4,049.67 Mn</strong> (NII +9.13% to LKR 5,788.30 Mn; Fee Income +15.06% to LKR 705.90 Mn; Other Operating Income +98.74% to LKR 428.56 Mn) and 19.5%-owned associate <strong>TVS Lanka contributed LKR 393.57 Mn</strong> in a single quarter!</li>
+          </ul>
+        </div>
+
+        <div class="grid-3">
+          <div class="stat-card">
+            <div class="stat-card-label">Normalized Sustainable Earnings</div>
+            <div class="stat-card-val" style="color: var(--teal-profit);">LKR 8.30–9.20 Bn</div>
+            <div class="stat-card-desc">
+              Stripping out the one-off FY26 ECL reversal (+LKR 4.96 Bn) and applying a normalized 1.25%–1.50% credit cost alongside TVS Lanka’s LKR 1.1–1.4 Bn annual equity share yields sustainable Parent EPS of <strong>LKR 26.10 – LKR 28.90/share</strong> (22.5%–24.5% ROE).
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-label">Base-Case Intrinsic Valuation</div>
+            <div class="stat-card-val" style="color: var(--navy-accent);">LKR 146.50 / sh</div>
+            <div class="stat-card-desc">
+              Blended Justified P/BV (<code>1.24x</code> 1Q27 NAVPS of LKR 117.56 at 23.0% sustainable ROE, 19.5% <code>Ke</code>, 5.0% <code>g</code>) and Residual Income model. Note 22 (p. 214) discloses Management’s own internal RI valuation at <strong>LKR 152.81/share (LKR 48.60 Bn)</strong>.
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-label">Key Governance &amp; Funding Risks</div>
+            <div class="stat-card-val" style="color: var(--crimson-risk);">23.89% Pledged</div>
+            <div class="stat-card-desc">
+              Controlling shareholder BG Investments (50.25% stake) holds <strong>76.00 Mn shares (23.89% of COCR)</strong> in pledged/collateral accounts at LOLC Finance &amp; PLC; plus <strong>LKR 4.10 Bn</strong> in unresolved tax appeals (Note 51.1) and a <strong>LKR 1.50 Bn 13% RPT loan</strong> from APIIT.
+            </div>
+          </div>
+        </div>
+
+        <h3 class="sub-heading">Dual-Price Valuation &amp; Return Summary Across Market Reference Dates</h3>
+        <div class="table-wrap">
+          <table class="fin-table text-last-col">
+            <thead>
+              <tr>
+                <th>Valuation &amp; Per-Share Metric</th>
+                <th>1Q27 Close (30 Jun 2026)</th>
+                <th>2Q27 Filing Close — 30 Sep 2026</th>
+                <th>Oct 2026 Spot (TradingView)</th>
+                <th>Base-Case Intrinsic Fair Value</th>
+                <th>Plain-English Clue / What to Notice</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Reference Share Price (LKR)</strong></td>
+                <td>120.00</td>
+                <td><strong>96.70</strong></td>
+                <td><strong>90.20</strong></td>
+                <td class="num-pos"><strong>144.80</strong></td>
+                <td>Stock digested LKR 10/sh dividend &amp; 95.4M block crossing</td>
+              </tr>
+              <tr>
+                <td><strong>Implied Market Cap (LKR Mn)</strong> (318.074 Mn shares)</td>
+                <td>38,168.92</td>
+                <td>30,757.79</td>
+                <td>28,690.31</td>
+                <td class="num-pos">46,057.17</td>
+                <td>Float-adjusted MCap at 30 Sep '26 is LKR 15.07 Bn (49% float)</td>
+              </tr>
+              <tr>
+                <td><strong>Drawdown from All-Time High (LKR 145.25, Sep 2025)</strong></td>
+                <td class="num-neg">-17.38%</td>
+                <td class="num-neg">-33.43%</td>
+                <td class="num-neg">-37.90%</td>
+                <td>-0.31% vs ATH</td>
+                <td>~10% of drawdown is mechanical ex-dividend adjustment</td>
+              </tr>
+              <tr>
+                <td><strong>P/E on Audited FY25/26 Group EPS (LKR 30.66)</strong></td>
+                <td>3.91x</td>
+                <td>3.15x</td>
+                <td>2.94x</td>
+                <td>4.72x</td>
+                <td>Includes one-off +LKR 4.96 Bn ECL reversal in FY26</td>
+              </tr>
+              <tr>
+                <td><strong>P/E on 1H FY26/27 Annualized EPS (LKR 23.85)</strong></td>
+                <td>5.03x</td>
+                <td><strong>4.05x</strong></td>
+                <td><strong>3.78x</strong></td>
+                <td><strong>6.07x</strong></td>
+                <td>Clean run-rate after -LKR 846 Mn 1H27 impairment charge!</td>
+              </tr>
+              <tr>
+                <td><strong>P/BV on Unaudited 1Q FY26/27 Group NAVPS (LKR 117.56)</strong></td>
+                <td>1.02x</td>
+                <td>0.82x</td>
+                <td>0.77x</td>
+                <td>1.23x</td>
+                <td>Pre-final dividend (LKR 7.00/sh) book value</td>
+              </tr>
+              <tr>
+                <td><strong>P/BV on Unaudited 2Q FY26/27 Group NAVPS (LKR 115.97)</strong></td>
+                <td>1.03x</td>
+                <td><strong>0.83x</strong></td>
+                <td><strong>0.78x</strong></td>
+                <td><strong>1.25x</strong></td>
+                <td>16.6%–22.2% discount to post-dividend net asset value</td>
+              </tr>
+              <tr>
+                <td><strong>FY25/26 Total Dividend Yield (LKR 10.00 DPS Paid in 1H27)</strong></td>
+                <td class="num-pos">8.33%</td>
+                <td class="num-pos">10.34%</td>
+                <td class="num-pos">11.09%</td>
+                <td>6.91%</td>
+                <td>LKR 3,180.74 Mn cash paid out in 6M ended 30 Sep 2026</td>
+              </tr>
+              <tr class="row-green">
+                <td><strong>Implied Capital Upside to Base Fair Value (LKR 144.80)</strong></td>
+                <td>+20.67%</td>
+                <td><strong>+49.74%</strong></td>
+                <td><strong>+60.53%</strong></td>
+                <td>Baseline (0.0%)</td>
+                <td>Excludes ~9%–11% annual cash dividend yield</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           SECTION 02: INWESTOUT-STYLE SVG SANKEY & GROUP OWNERSHIP ARCHITECTURE
+           ===================================================================== -->
+      <section class="report-section" id="sec-02">
+        <div class="section-header">
+          <div class="section-title-wrap">
+            <span class="section-num">02</span>
+            <h2 class="section-title">Income Statement Flow (SVG Sankey) &amp; Group Ecosystem Architecture</h2>
+          </div>
+          <span class="section-meta">Interactive Multi-Period Flow | Note 36–46 (FY26 AR) &amp; 1Q27 Interim p. 4</span>
+        </div>
+
+        <p>
+          To visualize how Commercial Credit converts gross lending and leasing yields into bottom-line Parent Profit After Tax—and how the <strong>+LKR 4,955.13 Mn impairment reversal in FY2025/26</strong> altered the income statement waterfall compared to both the prior year (FY2024/25) and the normalized 1Q FY2026/27 run rate—use the interactive period switcher below. Notice how in FY2025/26, the net impairment credit injects <strong>+LKR 4,955 Mn</strong> directly into Net Operating Income, whereas in 1Q FY2026/27 (3M ended 30 June 2026) credit costs revert to a normal <strong>-LKR 444 Mn outflow</strong> while <strong>Associate TVS Lanka (+LKR 394 Mn in 1Q27 alone)</strong> and expanding Net Interest Income carry the bottom line.
+        </p>
+
+        <div class="control-bar">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13.5px; font-weight: 700; color: var(--navy-accent);">
+            SELECT INCOME STATEMENT FLOW PERIOD (CONSOLIDATED GROUP, LKR MN):
+          </div>
+          <div class="switcher-group">
+            <button class="sw-btn active" onclick="renderSankey('1h27', this)">1H FY2026/27 Unaudited (6M Ended 30 Sep 2026)</button>
+            <button class="sw-btn" onclick="renderSankey('2q27', this)">2Q FY2026/27 Unaudited (3M Ended 30 Sep 2026)</button>
+            <button class="sw-btn" onclick="renderSankey('1q27', this)">1Q FY2026/27 Unaudited (3M Ended 30 Jun 2026)</button>
+            <button class="sw-btn" onclick="renderSankey('fy26', this)">FY2025/26 Audited (12M Ended 31 Mar 2026)</button>
+            <button class="sw-btn" onclick="renderSankey('fy25', this)">FY2024/25 Audited (12M Ended 31 Mar 2025)</button>
+          </div>
+        </div>
+
+        <div class="sankey-wrapper" id="sankey-container">
+          <!-- Populated dynamically by JS SVG generator -->
+        </div>
+
+        <h3 class="sub-heading">Group Ownership, Pledged Share Collateral &amp; Investee Ecosystem Architecture</h3>
+        <p>
+          Understanding Commercial Credit requires looking both <strong>above</strong> the company (at its controlling shareholder structure and pledged share blocks) and <strong>below</strong> the company (at its 100% subsidiary, 19.5% equity-accounted vehicle associate, and 19.9% fintech stake). The vector architectural map below synthesizes disclosures from <strong>1Q FY2026/27 Note 9 (p. 14)</strong>, <strong>FY2025/26 Annual Report Notes 1.2, 13.2, 17, 18, 26 &amp; 53 (pp. 167, 193–198, 217, 264–266)</strong>, and post-balance-sheet CSE filings:
+        </p>
+
+        <div class="sankey-wrapper" style="padding: 18px;">
+          <svg viewBox="0 0 1160 510" xmlns="http://www.w3.org/2000/svg" style="width: 100%; min-width: 820px; height: auto; display: block; font-family: 'Plus Jakarta Sans', sans-serif;">
+            <defs>
+              <marker id="arrow-navy" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 1 L 10 5 L 0 9 z" fill="#0F172A"/>
+              </marker>
+              <marker id="arrow-crimson" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 1 L 10 5 L 0 9 z" fill="#B91C1C"/>
+              </marker>
+              <marker id="arrow-teal" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 1 L 10 5 L 0 9 z" fill="#0D9488"/>
+              </marker>
+            </defs>
+
+            <!-- Background Layer Bands -->
+            <rect x="10" y="10" width="1140" height="165" rx="6" fill="#F8FAFC" stroke="#CBD5E1" stroke-dasharray="4 4"/>
+            <text x="24" y="32" font-family="IBM Plex Mono" font-size="11.5" font-weight="700" fill="#475569">UPPER TIER: SHAREHOLDER CONTROL, COLLATERAL PLEDGES &amp; RELATED-PARTY TIER-2 FUNDING</text>
+
+            <rect x="10" y="340" width="1140" height="160" rx="6" fill="#F0FDF4" stroke="#BBF7D0" stroke-dasharray="4 4"/>
+            <text x="24" y="362" font-family="IBM Plex Mono" font-size="11.5" font-weight="700" fill="#15803D">LOWER TIER: SUBSIDIARY, EQUITY-ACCOUNTED ASSOCIATE (TVS LANKA) &amp; STRATEGIC FINTECH INVESTEE</text>
+
+            <!-- Top Left: BG Capital / BG Investments -->
+            <rect x="28" y="46" width="350" height="115" rx="6" fill="#FFFFFF" stroke="#0F172A" stroke-width="2"/>
+            <rect x="28" y="46" width="350" height="26" rx="6" fill="#0F172A"/>
+            <text x="40" y="63" font-family="IBM Plex Mono" font-size="12" font-weight="700" fill="#FFFFFF">ULTIMATE PARENT: BG CAPITAL / BG INVESTMENTS</text>
+            <text x="40" y="88" font-size="12.5" font-weight="700" fill="#111827">Total Stake: 159,832,175 Shares (50.25% of COCR)</text>
+            <text x="40" y="106" font-size="12" fill="#334155">• Direct Unencumbered: 83,832,175 sh (26.36%)</text>
+            <text x="40" y="124" font-size="12" font-weight="600" fill="#B91C1C">• Pledged @ LOLC Finance: 45,000,000 sh (14.15%)</text>
+            <text x="40" y="142" font-size="12" font-weight="600" fill="#B91C1C">• Pledged @ People's Leasing: 31,000,000 sh (9.75%)</text>
+
+            <!-- Top Middle: Group Lease Holdings (In Liquidation) -->
+            <rect x="405" y="46" width="350" height="115" rx="6" fill="#FFFBEB" stroke="#D97706" stroke-width="2"/>
+            <rect x="405" y="46" width="350" height="26" rx="6" fill="#D97706"/>
+            <text x="417" y="63" font-family="IBM Plex Mono" font-size="12" font-weight="700" fill="#FFFFFF">FOREIGN BLOCK: GROUP LEASE HOLDINGS (SINGAPORE)</text>
+            <text x="417" y="88" font-size="12.5" font-weight="700" fill="#78350F">1Q27 Stake: 95,390,500 Shares (29.99% — #1 Holder)</text>
+            <text x="417" y="107" font-size="12" fill="#92400E">• Held "In Liquidation" since 2018 regional dispute</text>
+            <text x="417" y="125" font-size="12" font-weight="700" fill="#15803D">• RESOLVED AUG 2026: Entire 29.99% divested for</text>
+            <text x="417" y="142" font-size="12" font-weight="700" fill="#15803D">  &gt;LKR 9.0 Bn (~LKR 94.35/sh) to local HNW/funds!</text>
+
+            <!-- Top Right: Fellow Subsidiary APIIT & Public Float -->
+            <rect x="782" y="46" width="350" height="115" rx="6" fill="#FEF2F2" stroke="#B91C1C" stroke-width="2"/>
+            <rect x="782" y="46" width="350" height="26" rx="6" fill="#B91C1C"/>
+            <text x="794" y="63" font-family="IBM Plex Mono" font-size="12" font-weight="700" fill="#FFFFFF">RELATED-PARTY TIER-2 DEBT &amp; PUBLIC FLOAT</text>
+            <text x="794" y="88" font-size="12.5" font-weight="700" fill="#991B1B">APIIT Lanka (Pvt) Ltd (Fellow BG Subsidiary):</text>
+            <text x="794" y="106" font-size="12" fill="#7F1D1D">• Lent LKR 1,500 Mn 5-Yr Unsecured Subordinated</text>
+            <text x="794" y="122" font-size="12" fill="#7F1D1D">  Loan to COCR at 13.0% p.a. (LKR 195 Mn/yr int.)</text>
+            <text x="794" y="142" font-size="12" font-weight="700" fill="#15803D">• Public Float (30 Sep '26): 49.00% (10,151 holders!)</text>
+
+            <!-- Center Node: Commercial Credit and Finance PLC -->
+            <rect x="230" y="205" width="700" height="98" rx="8" fill="#0F172A" stroke="#D97706" stroke-width="3"/>
+            <text x="580" y="232" text-anchor="middle" font-family="Newsreader" font-size="21" font-weight="700" fill="#FFFFFF">COMMERCIAL CREDIT AND FINANCE PLC (CSE: COCR.N0000)</text>
+            <text x="580" y="254" text-anchor="middle" font-family="IBM Plex Mono" font-size="12.5" fill="#FBBF24">133 Branches | 2Q27 Assets: LKR 132.43 Bn | Net Loans &amp; Leases: LKR 95.61 Bn | Repos: LKR 9.08 Bn</text>
+            <text x="580" y="274" text-anchor="middle" font-family="IBM Plex Mono" font-size="12" fill="#E2E8F0">Deposits: LKR 60.38 Bn | Bank Debt: LKR 27.22 Bn | Sub. Debt: LKR 2.63 Bn | Group Equity: LKR 36.89 Bn</text>
+            <text x="580" y="292" text-anchor="middle" font-family="IBM Plex Mono" font-size="11.5" fill="#5EEAD4">100.0% Parent Attributable Profit &amp; Equity (Zero Non-Controlling Interest Leakage)</text>
+
+            <!-- Arrows from Top to Center -->
+            <path d="M 203 161 L 360 205" stroke="#0F172A" stroke-width="2.2" fill="none" marker-end="url(#arrow-navy)"/>
+            <path d="M 580 161 L 580 205" stroke="#D97706" stroke-width="2.2" fill="none" marker-end="url(#arrow-navy)"/>
+            <path d="M 957 161 L 780 205" stroke="#B91C1C" stroke-width="2.2" stroke-dasharray="5 3" fill="none" marker-end="url(#arrow-crimson)"/>
+
+            <!-- Bottom Left: 100% Subsidiary CCIB -->
+            <rect x="28" y="376" width="340" height="112" rx="6" fill="#FFFFFF" stroke="#0D9488" stroke-width="2"/>
+            <rect x="28" y="376" width="340" height="25" rx="6" fill="#0D9488"/>
+            <text x="40" y="393" font-family="IBM Plex Mono" font-size="11.5" font-weight="700" fill="#FFFFFF">100% SUBSIDIARY (CONSOLIDATED — NOTE 17)</text>
+            <text x="40" y="416" font-size="13" font-weight="700" fill="#111827">Commercial Credit Insurance Brokers (Pvt) Ltd</text>
+            <text x="40" y="435" font-size="12" fill="#334155">• Acquired Aug 2022 for LKR 15.0 Mn cost</text>
+            <text x="40" y="453" font-size="12" fill="#334155">• FY26 Net Assets: LKR 174.76 Mn (vs 127.58 Mn)</text>
+            <text x="40" y="471" font-size="12" font-weight="700" fill="#15803D">• Paid LKR 160.16 Mn cash dividend to COCR in FY26</text>
+
+            <!-- Bottom Middle: 19.5% Associate TVS Lanka -->
+            <rect x="395" y="376" width="390" height="112" rx="6" fill="#FFFFFF" stroke="#15803D" stroke-width="2.5"/>
+            <rect x="395" y="376" width="390" height="25" rx="6" fill="#15803D"/>
+            <text x="407" y="393" font-family="IBM Plex Mono" font-size="11.5" font-weight="700" fill="#FFFFFF">19.5% ASSOCIATE (EQUITY ACCOUNTED — NOTE 18)</text>
+            <text x="407" y="416" font-size="13" font-weight="700" fill="#111827">TVS Lanka (Pvt) Ltd (2-Wheelers, 3-Wheelers, Parts)</text>
+            <text x="407" y="435" font-size="12" fill="#334155">• FY26 Revenue: LKR 49,888.57 Mn (+122.0% YoY!)</text>
+            <text x="407" y="453" font-size="12" fill="#334155">• FY26 PAT: LKR 4,127.98 Mn (+104.2% YoY!)</text>
+            <text x="407" y="471" font-size="12" font-weight="700" fill="#15803D">• COCR Share: LKR 804.96 Mn (FY26) + LKR 393.57 Mn (1Q27)</text>
+
+            <!-- Bottom Right: 19.9% FVOCI Mega Pay -->
+            <rect x="812" y="376" width="320" height="112" rx="6" fill="#FFFFFF" stroke="#1D4ED8" stroke-width="2"/>
+            <rect x="812" y="376" width="320" height="25" rx="6" fill="#1D4ED8"/>
+            <text x="824" y="393" font-family="IBM Plex Mono" font-size="11.5" font-weight="700" fill="#FFFFFF">19.9% UNQUOTED EQUITY (FVOCI — NOTE 13.2)</text>
+            <text x="824" y="416" font-size="13" font-weight="700" fill="#111827">Mega Pay (Pvt) Ltd ("Pay&amp;Go" Kiosks/App)</text>
+            <text x="824" y="435" font-size="12" fill="#334155">• Total Cost: LKR 180.00 Mn (+LKR 45 Mn in FY26)</text>
+            <text x="824" y="453" font-size="12" fill="#334155">• Carrying DCF Value (31 Mar '26): LKR 203.00 Mn</text>
+            <text x="824" y="471" font-size="12" font-weight="600" fill="#1D4ED8">• Digital collection rail for micro/leasing payments</text>
+
+            <!-- Arrows from Center to Bottom -->
+            <path d="M 380 303 L 210 376" stroke="#0D9488" stroke-width="2.2" fill="none" marker-end="url(#arrow-teal)"/>
+            <path d="M 580 303 L 580 376" stroke="#15803D" stroke-width="2.8" fill="none" marker-end="url(#arrow-teal)"/>
+            <path d="M 780 303 L 960 376" stroke="#1D4ED8" stroke-width="2.2" fill="none" marker-end="url(#arrow-navy)"/>
+          </svg>
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           SECTION 03: 10-YEAR TRAJECTORY & 2022–2026 RE-RATING ANATOMY
+           ===================================================================== -->
+      <section class="report-section" id="sec-03">
+        <div class="section-header">
+          <div class="section-title-wrap">
+            <span class="section-num">03</span>
+            <h2 class="section-title">10-Year Historical Trajectory &amp; Anatomy of the 2022–2026 Re-Rating</h2>
+          </div>
+          <span class="section-meta">FY2016/17 – 1Q FY2026/27 | Continuous 318,074,365 Share Base (Zero Splits)</span>
+        </div>
+
+        <p>
+          Synthesizing the <strong>Ten-Year Financial Summary in the FY2023/24 Annual Report (pp. 203–204)</strong>, the <strong>Ten-Year Summary in the FY2025/26 Annual Report (pp. 269–270)</strong>, and the <strong>1Q FY2026/27 Interim Financial Statements (pp. 1–16)</strong> confirms a critical structural fact: <strong>Commercial Credit and Finance PLC has maintained an unchanged issued share count of exactly 318,074,365 ordinary shares (Stated Capital: LKR 2,150,640,315) across the entire decade from FY2014/15 through 30 June 2026</strong> (Note 32, AR26 p. 224). Unlike many CSE financial counters that diluted shareholders via emergency rights issues or scrip dividends during the 2020 pandemic or 2022 rate shock, every single rupee of Commercial Credit’s book value expansion—from <strong>LKR 32.33/share in FY2016/17 to LKR 117.56/share in 1Q FY2026/27 (a 3.64x compounding of NAVPS)</strong>—was generated organically from retained earnings alongside regular cash dividends.
+        </p>
+
+        <p>
+          The historical record explains why <code>COCR.N0000</code> collapsed to <strong>LKR 16.90 in FY2019/20</strong> and <strong>LKR 22.50 in FY2022/23</strong> before surging more than sixfold to <strong>LKR 145.25 in September 2025</strong>:
+        </p>
+        <ul class="forensic-list">
+          <li><strong>Phase 1 — The 2022/23 Interest Rate Shock (AWPLR ~28%, Deposit Repricing faster than Fixed-Rate Leases):</strong> When the Central Bank of Sri Lanka (CBSL) hiked policy rates by 950 bps in April 2022, Commercial Credit’s 3-to-5-year fixed-rate vehicle lease book could not reprice immediately, whereas its customer fixed deposits and bank borrowings repriced upward within months. Consequently, in FY2022/23, <strong>Interest Expense more than doubled (+117.4% YoY) from LKR 6,416.29 Mn to LKR 13,948.10 Mn</strong>, compressing Net Interest Margin (NIM) while economic contraction pushed collective impairment charges to <strong>LKR 3,422.54 Mn</strong> and Gross Stage-3 NPAs to <strong>11.07%</strong>. Group PAT fell <strong>-52.1% YoY</strong> from LKR 4,520.31 Mn (FY21/22) to <strong>LKR 2,163.50 Mn</strong> (EPS LKR 6.80), and a one-off retrospective <strong>Surcharge Tax of LKR 812.92 Mn</strong> was debited directly against retained earnings.</li>
+          <li><strong>Phase 2 — The Disinflation Windfall &amp; Liability Down-Repricing (FY2024/25 – FY2025/26):</strong> As CBSL eased monetary policy and shifted to an <strong>8.00% Overnight Policy Rate (OPR)</strong> in 2025/26 (driving the 6-month Treasury Bill down to 7.66% and AWLR down to 11.49% by March 2026), Commercial Credit’s funding cost plunged while high-yielding leases originated in 2022–2024 remained locked in. <strong>Interest Expense dropped by -34.5% (-LKR 4,977.67 Mn) in FY2024/25</strong> (from LKR 14,431.33 Mn to LKR 9,453.66 Mn) and fell another <strong>-14.2% (-LKR 1,338.93 Mn) in FY2025/26 to LKR 8,114.73 Mn</strong>. That liability repricing expanded Group NII from LKR 12,820.11 Mn (FY23/24) to <strong>LKR 19,034.58 Mn (FY25/26, NIM 18.7%)</strong> and <strong>LKR 5,788.30 Mn in 1Q FY26/27 alone (annualized LKR 23.15 Bn)</strong>.</li>
+        </ul>
+
+        <div class="chart-box">
+          <div class="chart-header">
+            <div>
+              <div class="chart-title">10-Year Trajectory: Share Price High/Close, Group NAVPS &amp; Basic EPS (FY16/17 – 1Q FY26/27)</div>
+              <div class="chart-subtitle">Source: Audited Annual Reports FY23/24 (pp. 203–204), FY25/26 (pp. 269–270) &amp; 1Q FY26/27 Interim (p. 4, 15)</div>
+            </div>
+          </div>
+          <div class="canvas-holder">
+            <canvas id="chartTenYear"></canvas>
+          </div>
+        </div>
+
+        <h3 class="sub-heading">10-Year Master Financial &amp; Per-Share Table (FY2016/17 – 1Q FY2026/27)</h3>
+        <div class="table-wrap">
+          <table class="fin-table">
+            <thead>
+              <tr>
+                <th>Metric (LKR Mn unless stated)</th>
+                <th>FY16/17 (Co)</th>
+                <th>FY18/19 (Co)</th>
+                <th>FY20/21 (Co)</th>
+                <th>FY21/22 (Co)</th>
+                <th>FY22/23 (Grp)</th>
+                <th>FY23/24 (Grp)</th>
+                <th>FY24/25 (Grp)</th>
+                <th>FY25/26 (Grp)</th>
+                <th>1Q FY26/27 (3M Grp)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Gross Income</strong></td>
+                <td>21,150.70</td>
+                <td>22,071.50</td>
+                <td>18,521.46</td>
+                <td>21,781.33</td>
+                <td>29,215.40</td>
+                <td>31,295.07</td>
+                <td>31,703.47</td>
+                <td>31,390.32</td>
+                <td>9,347.09</td>
+              </tr>
+              <tr>
+                <td><strong>Interest Income</strong></td>
+                <td>19,021.30</td>
+                <td>20,115.80</td>
+                <td>16,421.74</td>
+                <td>18,365.49</td>
+                <td>27,004.07</td>
+                <td>27,251.44</td>
+                <td>27,337.86</td>
+                <td>27,149.31</td>
+                <td>8,226.28</td>
+              </tr>
+              <tr>
+                <td><strong>Interest Expense</strong></td>
+                <td>(7,521.10)</td>
+                <td>(8,842.30)</td>
+                <td>(6,835.72)</td>
+                <td>(6,416.29)</td>
+                <td class="num-neg">(13,948.10)</td>
+                <td class="num-neg">(14,431.33)</td>
+                <td>(9,453.66)</td>
+                <td class="num-pos">(8,114.73)</td>
+                <td>(2,437.98)</td>
+              </tr>
+              <tr class="row-total">
+                <td><strong>Net Interest Income (NII)</strong></td>
+                <td>11,500.20</td>
+                <td>11,273.50</td>
+                <td>9,586.02</td>
+                <td>11,949.20</td>
+                <td>13,055.97</td>
+                <td>12,820.11</td>
+                <td>17,884.19</td>
+                <td>19,034.58</td>
+                <td>5,788.30</td>
+              </tr>
+              <tr>
+                <td><strong>Impairment (Charge) / Reversal</strong></td>
+                <td>(1,842.50)</td>
+                <td>(2,914.60)</td>
+                <td>(2,418.90)</td>
+                <td>(1,412.80)</td>
+                <td class="num-neg">(3,422.54)</td>
+                <td>(885.31)</td>
+                <td class="num-neg">(1,651.89)</td>
+                <td class="num-warn">+4,955.13</td>
+                <td class="num-neg">(444.00)</td>
+              </tr>
+              <tr>
+                <td><strong>Share of Associate Profit (TVS Lanka 19.5%)</strong></td>
+                <td>—</td>
+                <td>—</td>
+                <td>—</td>
+                <td>95.40</td>
+                <td>(42.10)</td>
+                <td>154.37</td>
+                <td>322.12</td>
+                <td class="num-pos">804.96</td>
+                <td class="num-pos">393.57</td>
+              </tr>
+              <tr>
+                <td><strong>Profit Before Income Tax (PBT)</strong></td>
+                <td>4,218.40</td>
+                <td>3,112.50</td>
+                <td>3,297.14</td>
+                <td>6,541.20</td>
+                <td>3,485.12</td>
+                <td>7,041.82</td>
+                <td>9,621.65</td>
+                <td>15,115.81</td>
+                <td>3,189.71</td>
+              </tr>
+              <tr class="row-green">
+                <td><strong>Profit After Tax (PAT — 100% Parent)</strong></td>
+                <td>2,915.65</td>
+                <td>2,071.40</td>
+                <td>2,306.59</td>
+                <td>4,520.31</td>
+                <td>2,163.50</td>
+                <td>4,355.88</td>
+                <td>6,147.09</td>
+                <td>9,752.82</td>
+                <td>2,072.04</td>
+              </tr>
+              <tr>
+                <td><strong>Net Loans &amp; Lease Portfolio</strong></td>
+                <td>63,412.00</td>
+                <td>64,890.00</td>
+                <td>64,218.50</td>
+                <td>73,993.10</td>
+                <td>75,593.12</td>
+                <td>81,437.98</td>
+                <td>69,884.54</td>
+                <td>98,970.93</td>
+                <td>97,780.28</td>
+              </tr>
+              <tr>
+                <td><strong>Customer Deposits</strong></td>
+                <td>52,140.00</td>
+                <td>51,890.00</td>
+                <td>45,112.30</td>
+                <td>48,078.40</td>
+                <td>59,244.15</td>
+                <td>62,120.89</td>
+                <td>55,681.78</td>
+                <td>55,202.70</td>
+                <td>57,068.09</td>
+              </tr>
+              <tr>
+                <td><strong>Total Debt / Bank Borrowings</strong></td>
+                <td>16,820.00</td>
+                <td>15,410.00</td>
+                <td>17,210.40</td>
+                <td>18,733.20</td>
+                <td>16,260.34</td>
+                <td>13,859.12</td>
+                <td>17,911.78</td>
+                <td class="num-warn">31,009.05</td>
+                <td>27,157.10</td>
+              </tr>
+              <tr>
+                <td><strong>Shareholders' Funds (Total Equity)</strong></td>
+                <td>10,283.34</td>
+                <td>12,689.10</td>
+                <td>15,214.80</td>
+                <td>19,192.60</td>
+                <td>19,923.41</td>
+                <td>24,364.88</td>
+                <td>28,502.16</td>
+                <td>36,274.42</td>
+                <td>37,392.23</td>
+              </tr>
+              <tr class="row-highlight">
+                <td><strong>Basic EPS (LKR / Share)</strong></td>
+                <td>9.17</td>
+                <td>6.51</td>
+                <td>7.25</td>
+                <td>14.21</td>
+                <td>6.80</td>
+                <td>13.69</td>
+                <td>19.33</td>
+                <td>30.66</td>
+                <td>6.51 (26.06 Ann.)</td>
+              </tr>
+              <tr>
+                <td><strong>Net Assets Per Share — NAVPS (LKR)</strong></td>
+                <td>32.33</td>
+                <td>39.89</td>
+                <td>47.83</td>
+                <td>60.34</td>
+                <td>62.64</td>
+                <td>76.60</td>
+                <td>89.61</td>
+                <td>114.04</td>
+                <td>117.56</td>
+              </tr>
+              <tr>
+                <td><strong>Dividend Per Share — DPS (LKR)</strong></td>
+                <td>1.50</td>
+                <td>1.50</td>
+                <td>1.50</td>
+                <td>2.50</td>
+                <td>2.00</td>
+                <td>1.00</td>
+                <td>4.00</td>
+                <td>10.00*</td>
+                <td>3.00 Int. Paid</td>
+              </tr>
+              <tr>
+                <td><strong>Return on Equity — ROE (%)</strong></td>
+                <td>31.76%</td>
+                <td>17.57%</td>
+                <td>16.29%</td>
+                <td>26.14%</td>
+                <td>11.06%</td>
+                <td>19.47%</td>
+                <td>24.20%</td>
+                <td>30.09%</td>
+                <td>22.50% (Ann.)</td>
+              </tr>
+              <tr>
+                <td><strong>Gross NPA / Stage 3 Ratio (%)</strong></td>
+                <td>5.28%</td>
+                <td>7.85%</td>
+                <td>9.12%</td>
+                <td>6.58%</td>
+                <td>11.07%</td>
+                <td>10.65%</td>
+                <td class="num-neg">26.07%**</td>
+                <td class="num-pos">4.71%</td>
+                <td>~4.85% (Est.)</td>
+              </tr>
+              <tr>
+                <td><strong>Share Price Close (31 Mar / 30 Jun, LKR)</strong></td>
+                <td>41.60</td>
+                <td>29.80</td>
+                <td>22.00</td>
+                <td>26.20</td>
+                <td>26.00</td>
+                <td>35.30</td>
+                <td>56.40</td>
+                <td>110.00</td>
+                <td>120.00 (Spot 90.20)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 13.5px; color: var(--ink-muted); font-family: 'IBM Plex Mono', monospace;">
+          *Note on FY25/26 DPS: COCR paid LKR 6.00/sh in FY25/26 (in respect of FY24/25) and declared LKR 3.00/sh 1st Interim (paid Jun 2026) + LKR 7.00/sh Final (approved 1 Sep 2026 AGM) = LKR 10.00/sh total payout for FY25/26. **FY24/25 Gross NPA of 26.07% reflects CBSL's tightening of Stage 3 classification to 90 Days Past Due (DPD) prior to the FY25/26 LKR 5.60 Bn write-off purge.
+        </p>
+      </section>
+
+      <!-- =====================================================================
+           SECTION 04: HEADLINE VS. REALITY — DECONSTRUCTING THE LKR 4.96 BN ECL REVERSAL
+           ===================================================================== -->
+      <section class="report-section" id="sec-04">
+        <div class="section-header">
+          <div class="section-title-wrap">
+            <span class="section-num">04</span>
+            <h2 class="section-title">"What the Headline Figures Conceal" — The LKR 4.96 Bn Impairment Reversal &amp; Cash Bridge</h2>
+          </div>
+          <span class="section-meta">Forensic Audit: Notes 10.1, 11.1, 39 &amp; Statement of Cash Flows (pp. 164, 184, 190, 228)</span>
+        </div>
+
+        <p>
+          Any superficial reading of Commercial Credit’s FY2025/26 income statement would conclude that core operating profitability surged by +58.66% YoY. A rigorous forensic decomposition of the income statement, Expected Credit Loss (ECL) allowance movements, and the statement of cash flows reveals a starkly different picture—one that every institutional investor must understand before valuing <code>COCR.N0000</code>.
+        </p>
+
+        <h3 class="sub-heading">1. Deconstructing the +LKR 4,955.13 Mn Impairment Reversal &amp; -96.3% Management Overlay Release</h3>
+        <p>
+          In FY2025/26, Commercial Credit’s <strong>Gross Income actually declined by -0.99% YoY</strong> (from LKR 31,703.47 Mn to LKR 31,390.32 Mn), while <strong>Total Operating Income (before impairment) grew by a modest +4.69% (+LKR 1,038.56 Mn)</strong> from LKR 22,165.12 Mn to LKR 23,203.68 Mn. Meanwhile, <strong>Total Operating Expenses rose by +15.67% (+LKR 1,361.33 Mn)</strong> from LKR 8,688.79 Mn to LKR 10,050.12 Mn, driven by a <strong>+28.05% surge in Personnel Expenses</strong> (from LKR 3,454.94 Mn to LKR 4,424.04 Mn as short-term employee bonuses and incentives jumped from LKR 1,392.41 Mn to LKR 1,754.02 Mn per Note 41).
+        </p>
+        <p>
+          Consequently, <strong>Pre-Impairment Core Operating Profit</strong> (<code>Total Operating Income − Total Operating Expenses</code>) actually <strong>contracted by -2.39% (-LKR 322.77 Mn) in FY2025/26</strong>, dipping from <strong>LKR 13,476.33 Mn in FY2024/25 to LKR 13,153.56 Mn in FY2025/26</strong>! How, then, did Operating Profit before VAT/SSCL leap by <strong>+53.15% (+LKR 6,284.25 Mn)</strong> from LKR 11,824.44 Mn to LKR 18,108.69 Mn?
+        </p>
+
+        <div class="table-wrap">
+          <table class="fin-table">
+            <thead>
+              <tr>
+                <th>Forensic Earnings Quality &amp; ECL Bridge (Group, LKR Mn)</th>
+                <th>FY25/26 Audited (12M)</th>
+                <th>1Q FY26/27 (3M Jun '26)</th>
+                <th>2Q FY25/26 (3M Sep '25)</th>
+                <th>2Q FY26/27 (3M Sep '26)</th>
+                <th>2Q YoY %</th>
+                <th>1H FY25/26 (6M Sep '25)</th>
+                <th>1H FY26/27 (6M Sep '26)</th>
+                <th>1H YoY Change</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Gross Income</strong> (Interim p. 4)</td>
+                <td>31,390.32</td>
+                <td>9,347.09</td>
+                <td>7,964.58</td>
+                <td>9,440.67</td>
+                <td class="num-pos">+18.53%</td>
+                <td>16,028.78</td>
+                <td>18,787.76</td>
+                <td class="num-pos">+2,758.97 (+17.21%)</td>
+              </tr>
+              <tr>
+                <td><strong>Interest Income</strong></td>
+                <td>27,149.31</td>
+                <td>8,226.28</td>
+                <td>7,032.20</td>
+                <td>8,372.93</td>
+                <td class="num-pos">+19.07%</td>
+                <td>14,274.92</td>
+                <td>16,599.22</td>
+                <td class="num-pos">+2,324.30 (+16.28%)</td>
+              </tr>
+              <tr>
+                <td><strong>Interest Expense</strong></td>
+                <td>(8,114.73)</td>
+                <td>(2,437.98)</td>
+                <td>(1,787.10)</td>
+                <td>(2,554.96)</td>
+                <td class="num-neg">+42.97%</td>
+                <td>(3,725.63)</td>
+                <td>(4,992.94)</td>
+                <td class="num-neg">-1,267.31 (+34.02%)</td>
+              </tr>
+              <tr class="row-total">
+                <td><strong>Net Interest Income (NII)</strong></td>
+                <td>19,034.58</td>
+                <td>5,788.30</td>
+                <td>5,245.10</td>
+                <td>5,817.97</td>
+                <td class="num-pos">+10.92%</td>
+                <td>10,549.29</td>
+                <td>11,606.27</td>
+                <td class="num-pos">+1,056.99 (+10.02%)</td>
+              </tr>
+              <tr>
+                <td><strong>Net Fee &amp; Commission Income</strong></td>
+                <td>2,703.14</td>
+                <td>705.90</td>
+                <td>649.35</td>
+                <td>645.19</td>
+                <td>-0.64%</td>
+                <td>1,262.84</td>
+                <td>1,351.09</td>
+                <td class="num-pos">+88.25 (+6.99%)</td>
+              </tr>
+              <tr>
+                <td><strong>Other Operating Income (Write-Off Recoveries)</strong></td>
+                <td>1,017.85</td>
+                <td>428.56</td>
+                <td>248.49</td>
+                <td>426.68</td>
+                <td class="num-pos">+71.71%</td>
+                <td>464.13</td>
+                <td>855.24</td>
+                <td class="num-pos">+391.11 (+84.27%)</td>
+              </tr>
+              <tr>
+                <td><strong>Real Estate &amp; Trading Gain / (Loss)</strong></td>
+                <td>448.11</td>
+                <td>(13.65)</td>
+                <td>34.54</td>
+                <td>(4.13)</td>
+                <td>-111.96%</td>
+                <td>26.90</td>
+                <td>(17.78)</td>
+                <td>-44.68</td>
+              </tr>
+              <tr class="row-total">
+                <td><strong>Total Operating Income (Pre-Impairment)</strong></td>
+                <td>23,203.68</td>
+                <td>6,909.10</td>
+                <td>6,177.47</td>
+                <td>6,885.71</td>
+                <td class="num-pos">+11.46%</td>
+                <td>12,303.15</td>
+                <td>13,794.81</td>
+                <td class="num-pos">+1,491.66 (+12.12%)</td>
+              </tr>
+              <tr>
+                <td><strong>Less: Total Operating Expenses (Personnel, D&amp;A, Other)</strong></td>
+                <td>(10,050.12)</td>
+                <td>(2,859.43)</td>
+                <td>(2,427.92)</td>
+                <td>(3,022.61)</td>
+                <td class="num-neg">+24.49%</td>
+                <td>(4,810.78)</td>
+                <td>(5,854.04)</td>
+                <td class="num-neg">-1,043.26 (+21.69%)</td>
+              </tr>
+              <tr class="row-highlight">
+                <td><strong>CORE PRE-IMPAIRMENT OPERATING PROFIT</strong></td>
+                <td><strong>13,153.56</strong></td>
+                <td><strong>4,049.67</strong></td>
+                <td><strong>3,749.55</strong></td>
+                <td><strong>3,863.10</strong></td>
+                <td class="num-pos"><strong>+3.03%</strong></td>
+                <td><strong>7,492.37</strong></td>
+                <td><strong>7,940.77</strong></td>
+                <td class="num-pos"><strong>+448.40 (+5.98%)</strong></td>
+              </tr>
+              <tr class="row-alert">
+                <td><strong>Impairment (Charge) / Reversal on Financial Assets</strong></td>
+                <td><strong>+4,955.13</strong></td>
+                <td><strong>(444.00)</strong></td>
+                <td><strong>+392.22</strong></td>
+                <td><strong>(401.97)</strong></td>
+                <td><strong>-794.19 Swing</strong></td>
+                <td><strong>+957.22</strong></td>
+                <td><strong>(845.97)</strong></td>
+                <td><strong>-1,803.19 Swing!</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Profit Before Tax on Financial Services</strong></td>
+                <td>18,108.69</td>
+                <td>3,633.67</td>
+                <td>4,141.78</td>
+                <td>3,461.13</td>
+                <td>-16.43%</td>
+                <td>8,449.60</td>
+                <td>7,094.80</td>
+                <td>-1,354.80 (-16.03%)</td>
+              </tr>
+              <tr>
+                <td><strong>Tax on Financial Services (VAT on FS 18% &amp; SSCL 2.5%)</strong></td>
+                <td>(3,797.84)</td>
+                <td>(837.53)</td>
+                <td>(903.64)</td>
+                <td>(827.68)</td>
+                <td class="num-pos">-8.41%</td>
+                <td>(1,806.56)</td>
+                <td>(1,665.22)</td>
+                <td class="num-pos">+141.34 (-7.82%)</td>
+              </tr>
+              <tr class="row-green">
+                <td><strong>Share of Profit of Associate (TVS Lanka 19.5%)</strong></td>
+                <td><strong>804.96</strong></td>
+                <td><strong>393.57</strong></td>
+                <td><strong>—</strong></td>
+                <td><strong>311.72</strong></td>
+                <td class="num-pos"><strong>+311.72</strong></td>
+                <td><strong>—</strong></td>
+                <td><strong>705.29</strong></td>
+                <td class="num-pos"><strong>+705.29 (11.5% of PBT!)</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Profit Before Income Tax (PBT)</strong></td>
+                <td>15,115.81</td>
+                <td>3,189.71</td>
+                <td>3,238.13</td>
+                <td>2,945.16</td>
+                <td>-9.05%</td>
+                <td>6,643.04</td>
+                <td>6,134.87</td>
+                <td>-508.17 (-7.65%)</td>
+              </tr>
+              <tr>
+                <td><strong>Income Tax Expense (30% Corporate Tax)</strong></td>
+                <td>(5,362.99)</td>
+                <td>(1,117.67)</td>
+                <td>(1,137.60)</td>
+                <td>(1,224.92)</td>
+                <td>+7.68%</td>
+                <td>(2,413.01)</td>
+                <td>(2,342.59)</td>
+                <td>+70.42 (-2.92%)</td>
+              </tr>
+              <tr class="row-total">
+                <td><strong>Reported Group Profit After Tax (100% Parent)</strong></td>
+                <td><strong>9,752.82</strong></td>
+                <td><strong>2,072.04</strong></td>
+                <td><strong>2,100.53</strong></td>
+                <td><strong>1,720.24</strong></td>
+                <td><strong>-18.10%</strong></td>
+                <td><strong>4,230.03</strong></td>
+                <td><strong>3,792.28</strong></td>
+                <td><strong>-437.75 (-10.35%)</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="sub-heading">2. Anatomy of the ECL Allowance Collapse: How Gross NPA Fell from 26.07% to 4.71%</h3>
+        <p>
+          In FY2024/25, following the Central Bank’s tightening of Non-Performing Asset (Stage 3) classification to <strong>90 Days Past Due (DPD)</strong>, Commercial Credit’s reported Gross NPA ratio stood at <strong>26.07%</strong> (Net NPA: <strong>13.39%</strong>), backed by a massive total ECL allowance pool of <strong>LKR 15,446.57 Mn</strong> (LKR 2,584.57 Mn on Loans in Note 10.1 + LKR 12,862.00 Mn on Leases/HP in Note 11.1). Within that LKR 15.45 Bn allowance sat <strong>LKR 5,429.76 Mn of discretionary "Post-Model Adjustments (Management Overlays)"</strong> accumulated during the 2022–2024 economic crisis.
+        </p>
+        <p>
+          In FY2025/26, three simultaneous balance-sheet actions reduced the total ECL allowance by <strong>-68.51% (-LKR 10,582.99 Mn)</strong> from LKR 15,446.57 Mn to <strong>LKR 4,863.58 Mn</strong> and compressed the Gross Stage-3 NPA ratio by <strong>-2,136 bps from 26.07% to 4.71%</strong>:
+        </p>
+
+        <div class="table-wrap">
+          <table class="fin-table text-last-col">
+            <thead>
+              <tr>
+                <th>ECL Allowance &amp; Management Overlay Audit (Notes 10.1 &amp; 11.1, LKR Mn)</th>
+                <th>Loans &amp; Advances (Note 10.1)</th>
+                <th>Lease &amp; Hire Purchase (Note 11.1)</th>
+                <th>Combined Lending Portfolio</th>
+                <th>Forensic Impact on P&amp;L and NPA Ratio</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Opening ECL Allowance Balance (1 April 2025)</strong></td>
+                <td>2,584.57</td>
+                <td>12,862.00</td>
+                <td><strong>15,446.57</strong></td>
+                <td>Supported 26.07% Gross NPA / 13.39% Net NPA</td>
+              </tr>
+              <tr class="row-highlight">
+                <td><strong>Net Charge / (Reversal) to Income Statement in FY25/26</strong></td>
+                <td class="num-pos">(636.09)</td>
+                <td class="num-pos">(4,347.24)</td>
+                <td class="num-pos"><strong>(4,983.32)*</strong></td>
+                <td>Boosted FY26 Pre-Tax Profit by +LKR 4.96 Bn</td>
+              </tr>
+              <tr class="row-alert">
+                <td><strong>Stage 3 Bad Debts Written Off Against Allowance in FY25/26</strong></td>
+                <td class="num-neg">(659.68)</td>
+                <td class="num-neg">(4,939.99)</td>
+                <td class="num-neg"><strong>(5,599.67)</strong></td>
+                <td>Purged LKR 5.60 Bn of legacy Stage 3 NPLs (vs LKR 299 Mn in FY25)</td>
+              </tr>
+              <tr class="row-total">
+                <td><strong>Closing ECL Allowance Balance (31 March 2026)</strong></td>
+                <td><strong>1,288.81</strong></td>
+                <td><strong>3,574.77</strong></td>
+                <td><strong>4,863.58</strong></td>
+                <td>Total ECL Coverage of Gross Loans fell from 18.10% to 4.68%</td>
+              </tr>
+              <tr>
+                <td><em>— Memo: Stage 1 ECL Allowance (FY25 → FY26)</em></td>
+                <td>235.12 → 193.04</td>
+                <td>884.74 → 482.34</td>
+                <td>1,119.86 → 675.38</td>
+                <td>Stage 1 Gross Book jumped +72.0% to LKR 88,979.48 Mn</td>
+              </tr>
+              <tr>
+                <td><em>— Memo: Stage 2 ECL Allowance (FY25 → FY26)</em></td>
+                <td>99.78 → 70.93</td>
+                <td>902.50 → 446.60</td>
+                <td>1,002.28 → 517.53</td>
+                <td>Stage 2 Gross Book declined -12.0% to LKR 9,920.89 Mn</td>
+              </tr>
+              <tr>
+                <td><em>— Memo: Stage 3 ECL Allowance (FY25 → FY26)</em></td>
+                <td>2,249.68 → 1,024.83</td>
+                <td>11,074.75 → 2,645.84</td>
+                <td>13,324.43 → 3,670.67</td>
+                <td>Stage 3 Provision Coverage = 74.40% of LKR 4,934.14 Mn Stage 3</td>
+              </tr>
+              <tr class="row-alert">
+                <td><strong>Post-Model Adjustment ("Management Overlays") FY25 → FY26</strong></td>
+                <td><strong>718.47 → 15.58</strong></td>
+                <td><strong>4,711.29 → 186.08</strong></td>
+                <td><strong>5,429.76 → 201.66</strong></td>
+                <td><strong>-LKR 5,228.11 Mn (-96.29%) Overlay Release drove the P&amp;L credit!</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 13.5px; color: var(--ink-muted); font-family: 'IBM Plex Mono', monospace;">
+          *Note: Combined loan &amp; lease reversal of LKR 4,983.32 Mn less LKR 28.19 Mn impairment charge on other financial assets/receivables equals the net P&amp;L credit of LKR 4,955.13 Mn in Note 39 (p. 228).
+        </p>
+
+        <h3 class="sub-heading">3. Operating Cash Flow vs. Accounting PAT: The LKR 29.09 Bn Loan Expansion Outflow</h3>
+        <p>
+          In FY2025/26, Commercial Credit reported record accounting PAT of <strong>+LKR 9,752.82 Mn</strong>, yet its Consolidated Statement of Cash Flows (AR26 p. 164) shows <strong>Net Cash Used in Operating Activities of -LKR 18,145.49 Mn</strong> (compared to positive <strong>+LKR 6,419.66 Mn</strong> in FY2024/25). For an industrial company, a -LKR 18.15 Bn operating cash burn would be a severe distress signal; for a Licensed Finance Company under SLFRS 7 / LKAS 7, however, new customer loan and lease disbursements are classified inside "Operating Cash Flows."
+        </p>
+        <p>
+          Inspecting the cash flow statement shows that <strong>Operating Cash Flow Before Working Capital Changes was strongly positive at +LKR 15,826.94 Mn</strong> in FY25/26. The negative operating cash flow was caused by the <strong>-LKR 24,113.06 Mn net cash deployment into Lease/HP receivables</strong> and <strong>-LKR 10,563.49 Mn net deployment into Loans &amp; Gold Advances</strong> while customer deposits were flat (-LKR 435.58 Mn). Crucially, in <strong>1Q FY2026/27 (3M ended 30 June 2026, Interim p. 7)</strong>, as gold-loan disbursements moderated and deposit inflows resumed (+LKR 1,806.27 Mn), <strong>Net Cash Generated from Operating Activities swung back to a strong positive +LKR 2,804.01 Mn</strong> (vs. -LKR 4,195.48 Mn in 1Q FY25/26), enabling management to repay <strong>LKR 4,043.67 Mn</strong> of wholesale bank borrowings during the June 2026 quarter!
+        </p>
+
+        <div class="chart-box">
+          <div class="chart-header">
+            <div>
+              <div class="chart-title">Earnings Quality Bridge: Reported PAT vs. Pre-Impairment Core Profit &amp; Operating Cash Flow (LKR Mn)</div>
+              <div class="chart-subtitle">Source: Audited Annual Reports FY22/23–FY25/26 &amp; Unaudited 1Q FY26/27 Interim Financial Statements</div>
+            </div>
+          </div>
+          <div class="canvas-holder">
+            <canvas id="chartEarningsQuality"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           SECTION 05: SCORECARD A (REGULATED NBFI CORE) — SEGMENTS, ASSET QUALITY & FUNDING
+           ===================================================================== -->
+      <section class="report-section" id="sec-05">
+        <div class="section-header">
+          <div class="section-title-wrap">
+            <span class="section-num">05</span>
+            <h2 class="section-title">Scorecard A (Regulated NBFI Core): Segment Mix, Gold Loan Surge &amp; Funding Shift</h2>
+          </div>
+          <span class="section-meta">Notes 10, 11, 23, 24, 54 &amp; Capital Adequacy Disclosures (AR26 pp. 183–191, 250–254, 267)</span>
+        </div>
+
+        <p>
+          Applying <strong>Scorecard A (Regulated Banks &amp; Licensed Finance Companies)</strong> from our forensic framework highlights three pivotal operational shifts inside Commercial Credit’s balance sheet between FY2024/25, FY2025/26, and 1Q FY2026/27:
+        </p>
+
+        <h3 class="sub-heading">1. Segmental Revenue &amp; Asset Mix: Finance Leases (67.9%) + Pawning/Gold Loans (25.0%)</h3>
+        <p>
+          Per <strong>Note 54 (Segment Information, AR26 pp. 267–268)</strong> and <strong>1Q FY2026/27 Note 12 (Interim p. 16)</strong>, <strong>95.93% of Commercial Credit’s lending portfolio is asset-backed/secured</strong> (up from 94.75% in FY25). Two segments dominate both revenue and assets:
+        </p>
+        <ul class="forensic-list">
+          <li><strong>Finance Lease &amp; Hire Purchase (LKR 67.24 Bn Net Portfolio in 1Q27; 68.8% of Net Lending):</strong> Concentrating on registered and unregistered two-wheelers, three-wheelers, commercial light trucks, and dual-purpose vehicles outside the Western Province (where 71% of branches are located). In FY2025/26, Finance Lease net receivables jumped <strong>+40.3% YoY</strong> from LKR 46,796.95 Mn to <strong>LKR 65,619.97 Mn</strong>, and expanded another <strong>+2.47% QoQ in 1Q FY26/27 to LKR 67,240.19 Mn</strong>.</li>
+          <li><strong>Pawning &amp; Gold Loans (LKR 25.85 Bn Gross in FY26; +72.86% YoY Surge):</strong> Per <strong>Note 10 (p. 183)</strong>, Gross Gold Loans surged by <strong>+72.86% (+LKR 10,896.39 Mn)</strong> from LKR 14,954.61 Mn in FY2024/25 to <strong>LKR 25,851.00 Mn</strong> at 31 March 2026, representing <strong>74.6% of all Loans &amp; Advances (ex-leases)</strong> and <strong>24.9% of total gross credit</strong>! While gold loans carry minimal credit default loss (1Q27 Pawning revenue jumped <strong>+76.0% YoY</strong> from LKR 948.43 Mn to <strong>LKR 1,669.25 Mn</strong>), they expose 25% of the loan book to global spot gold price retracements if gold prices correct sharply from 2025/26 highs. Notice that in 1Q FY2026/27, Pawning segment assets moderated by <strong>-13.9% QoQ</strong> from LKR 23,315.49 Mn to <strong>LKR 20,078.00 Mn</strong> as short-term gold advances redeemed.</li>
+        </ul>
+
+        <div class="table-wrap">
+          <table class="fin-table">
+            <thead>
+              <tr>
+                <th>Operating Segment Breakdown (Group — 2Q27 Interim p. 12, LKR Mn)</th>
+                <th>1H FY25/26 Rev (6M)</th>
+                <th>1H FY26/27 Rev (6M)</th>
+                <th>1H Rev YoY %</th>
+                <th>1H FY25/26 Seg. Result</th>
+                <th>1H FY26/27 Seg. Result</th>
+                <th>30 Sep 2025 Seg. Assets</th>
+                <th>30 Sep 2026 Seg. Assets</th>
+                <th>Asset Share (2Q27)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Finance Lease</strong> (2W, 3W, Commercial &amp; Cars)</td>
+                <td>9,201.38</td>
+                <td><strong>13,184.59</strong></td>
+                <td class="num-pos"><strong>+43.29%</strong></td>
+                <td>4,850.52</td>
+                <td class="num-pos"><strong>4,978.88</strong></td>
+                <td>51,479.90</td>
+                <td><strong>66,429.83</strong></td>
+                <td><strong>50.16%</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Pawning / Gold Loans</strong> (Ran Sahana &amp; Gold Advances)</td>
+                <td>2,283.11</td>
+                <td><strong>2,964.24</strong></td>
+                <td class="num-pos"><strong>+29.83%</strong></td>
+                <td>1,203.55</td>
+                <td class="num-pos"><strong>1,119.38</strong></td>
+                <td>22,950.17</td>
+                <td><strong>21,344.57</strong></td>
+                <td><strong>16.12%</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Microfinance &amp; SME Loans</strong></td>
+                <td>987.63</td>
+                <td><strong>981.49</strong></td>
+                <td>-0.62%</td>
+                <td>520.63</td>
+                <td>370.64</td>
+                <td>2,170.89</td>
+                <td><strong>3,000.73</strong></td>
+                <td><strong>2.27%</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Investments &amp; Treasury</strong> (T-Bills, Reverse Repos, Assoc.)</td>
+                <td>798.11</td>
+                <td><strong>810.42</strong></td>
+                <td class="num-pos">+1.54%</td>
+                <td>420.72</td>
+                <td>306.04</td>
+                <td>20,393.99</td>
+                <td><strong>25,333.52</strong></td>
+                <td><strong>19.13%</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Hire Purchase</strong> (Legacy book migrating to Leases)</td>
+                <td>2,027.00</td>
+                <td><strong>243.42</strong></td>
+                <td class="num-neg">-87.99%</td>
+                <td>1,068.54</td>
+                <td>91.92</td>
+                <td>5,036.41</td>
+                <td><strong>498.35</strong></td>
+                <td><strong>0.38%</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Revolving Loans, Term Loans &amp; Unallocated</strong></td>
+                <td>731.55</td>
+                <td><strong>603.61</strong></td>
+                <td>-17.49%</td>
+                <td>385.64</td>
+                <td>227.94</td>
+                <td>13,796.13</td>
+                <td><strong>15,827.29</strong></td>
+                <td><strong>11.95%</strong></td>
+              </tr>
+              <tr class="row-total">
+                <td><strong>Consolidated Group Total (6M Ended 30 Sep 2026)</strong></td>
+                <td><strong>16,028.78</strong></td>
+                <td><strong>18,787.76</strong></td>
+                <td class="num-pos"><strong>+17.21%</strong></td>
+                <td><strong>8,449.60</strong></td>
+                <td><strong>7,094.80</strong></td>
+                <td><strong>115,827.50</strong></td>
+                <td><strong>132,434.30</strong></td>
+                <td><strong>100.00%</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="sub-heading">2. The Funding Shift: Why Bank Borrowings Jumped +95.2% in FY26 (and Reversed in 1Q27)</h3>
+        <p>
+          Under Scorecard A, comparing <strong>Net Loan Book Expansion</strong> against <strong>Customer Deposit Growth</strong> reveals how Commercial Credit financed its massive <strong>+LKR 29,086.39 Mn (+41.62%) net credit expansion in FY2025/26</strong>:
+        </p>
+        <ul class="forensic-list">
+          <li><strong>FY2025/26 Wholesale Bank Reliance:</strong> In FY2025/26, Customer Deposits actually contracted slightly by <strong>-0.86% (-LKR 479.08 Mn)</strong> from LKR 55,681.78 Mn to <strong>LKR 55,202.70 Mn</strong> as management deliberately allowed expensive crisis-era fixed deposits to run off. To fund the LKR 29.09 Bn loan and lease expansion, Commercial Credit nearly doubled its <strong>Due to Banks (Term Loans &amp; Securitizations) by +95.18% (+LKR 14,386.70 Mn)</strong> from LKR 15,115.94 Mn to <strong>LKR 29,502.64 Mn</strong> (Note 23, p. 204), while ploughing back LKR 7.77 Bn of retained equity.</li>
+          <li><strong>1Q FY2026/27 Rebalancing:</strong> In the quarter ended 30 June 2026, management pivoted back toward retail deposit funding: Customer Deposits grew <strong>+3.38% QoQ (+LKR 1,865.39 Mn) to LKR 57,068.09 Mn</strong>, while short-term gold loans contracted by LKR 3.24 Bn. Management used that liquidity to <strong>repay LKR 3,906.44 Mn (-13.24% QoQ) of bank borrowings</strong>, bringing Due to Banks down to <strong>LKR 25,596.20 Mn</strong> at 30 June 2026.</li>
+          <li><strong>Fortress Capital Adequacy Headroom (27.02% Tier 1 vs. 10.0% Floor):</strong> Even after crossing the LKR 100 Bn asset threshold—which triggers a <strong>+1.50% capital surcharge</strong> under Finance Business Act Direction No. 03 of 2018 (raising minimum Tier 1 from 8.5% to <strong>10.0%</strong> and Total CAR from 12.5% to <strong>14.0%</strong>)—Commercial Credit’s <strong>Tier 1 Capital Ratio stood at 27.02% (+1,702 bps above the regulatory floor)</strong> and <strong>Total Capital Ratio stood at 28.05% (+1,405 bps above the floor)</strong> at 31 March 2026 (AR26 p. 253). Furthermore, on <strong>15 October 2026</strong>, COCR bolstered Tier 2 capital by another <strong>LKR 1,000 Mn</strong> via a CBSL-approved 5-year subordinated loan (<a class="ext-link" href="https://cdn.cse.lk/cmt/announcement_portal_prod/CSE%20Announcement%20(2)_14919175880931459.pdf" target="_blank">CSE Filing, 15 Oct 2026</a>).</li>
+        </ul>
+
+        <div class="grid-2">
+          <div class="chart-box" style="margin: 0;">
+            <div class="chart-header">
+              <div>
+                <div class="chart-title">Funding Mix Evolution: Deposits vs. Bank Debt &amp; Equity</div>
+                <div class="chart-subtitle">FY22/23 – 1Q FY26/27 (Consolidated Group, LKR Mn)</div>
+              </div>
+            </div>
+            <div class="canvas-holder" style="height: 310px;">
+              <canvas id="chartFundingMix"></canvas>
+            </div>
+          </div>
+
+          <div class="chart-box" style="margin: 0;">
+            <div class="chart-header">
+              <div>
+                <div class="chart-title">Gross Credit Portfolio by Stage &amp; Product (31 Mar 2026)</div>
+                <div class="chart-subtitle">Note 10, Note 11 &amp; Note 49.1.4 (Total Gross Book: LKR 103.83 Bn)</div>
+              </div>
+            </div>
+            <div class="canvas-holder" style="height: 310px;">
+              <canvas id="chartPortfolioMix"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           SECTION 06: NOTE-LEVEL DEBT, RELATED-PARTY & TVS LANKA AUDIT
+           ===================================================================== -->
+      <section class="report-section" id="sec-06">
+        <div class="section-header">
+          <div class="section-title-wrap">
+            <span class="section-num">06</span>
+            <h2 class="section-title">Note-Level Debt, Securitisation, Related-Party &amp; Contingent Liability Audit</h2>
+          </div>
+          <span class="section-meta">Notes 18, 22, 23, 25, 26, 51, 52 &amp; 53 (FY2025/26 Annual Report pp. 196, 204–217, 262–266)</span>
+        </div>
+
+        <h3 class="sub-heading">1. Note 23, 25, 26 &amp; 52 Audit: Bank Facilities, Securitizations &amp; LKR 41.56 Bn Pledged Assets</h3>
+        <p>
+          Auditing <strong>Note 23 (Due to Banks, pp. 204–215)</strong>, <strong>Note 25 (Debt Instruments Issued, p. 217)</strong>, <strong>Note 26 (Subordinate Term Loan, p. 217)</strong>, and <strong>Note 52 (Assets Pledged, p. 263)</strong> reveals the exact structure of Commercial Credit’s wholesale funding:
+        </p>
+        <ul class="forensic-list">
+          <li><strong>Bank Loans &amp; Securitizations (LKR 29,502.64 Mn at 31 Mar 2026 → LKR 25,596.20 Mn at 30 Jun 2026):</strong> Comprises <strong>LKR 24,520.99 Mn of Direct Bank Term Loans</strong> (up from LKR 12,188.07 Mn in FY25), <strong>LKR 3,932.28 Mn of Securitized Borrowings</strong> (up from LKR 1,355.12 Mn in FY25), and <strong>LKR 1,049.37 Mn of Bank Overdrafts</strong>. Key institutional lenders disclosed in Note 23.2 include <strong>Hatton National Bank (HNB)</strong> (multiple LKR 1.0 Bn–4.0 Bn term loans &amp; securitizations), <strong>Sampath Bank</strong>, <strong>Seylan Bank</strong>, <strong>Bank of Ceylon (BOC)</strong>, <strong>People’s Bank</strong>, <strong>National Development Bank (NDB)</strong>, <strong>Commercial Bank of Ceylon</strong>, and <strong>Cargills Bank</strong>.</li>
+          <li><strong>LKR 41,563.48 Mn of Assets Pledged as Security (Note 52, p. 263):</strong> To secure those bank term loans, overdrafts, and securitizations, Commercial Credit had pledged <strong>LKR 41,563.48 Mn (42.0% of its net lending book)</strong> of Lease/HP receivables, Loans, and Fixed Deposits as collateral at 31 March 2026 (up from LKR 23,803.65 Mn in FY25).</li>
+          <li><strong>Redemption of Listed Debentures (Note 25):</strong> In March 2026, COCR fully redeemed <strong>LKR 1,295.84 Mn</strong> of listed subordinated debentures upon maturity, reducing Debt Instruments Issued to zero.</li>
+          <li><strong>Related-Party 13.0% Fixed Subordinated Loan from APIIT (Note 26 &amp; Note 53.2.6, p. 217, 266):</strong> On 19 March 2025, Commercial Credit obtained a <strong>LKR 1,500.00 Mn 5-year Unsecured Subordinated Term Loan</strong> (carrying value LKR 1,506.41 Mn at Mar 2026; LKR 1,560.90 Mn at Jun 2026) from <strong>Asia Pacific Institute of Information Technology Lanka (Pvt) Ltd (APIIT)</strong>, a fellow subsidiary under parent BG Investments where COCR Chairman Mr. Bandula Egodage is also Chairman. The loan carries a fixed interest rate of <strong>13.0% p.a. (LKR 195.00 Mn annual interest expense)</strong> and matures on 18 March 2030. While CBSL approved its inclusion in Tier 2 capital, locking in a 13.0% fixed coupon to a related party just as market AWDR/T-bill rates dropped to 7.0%–8.0% transfers a generous ~500 bps spread to a parent-affiliated entity.</li>
+          <li><strong>October 15, 2026 Additional LKR 1.00 Bn Tier 2 Subordinated Loan:</strong> On 15 October 2026, COCR announced via CSE that it obtained an additional <strong>LKR 1,000.00 Mn 5-year Unsecured Subordinated Redeemable Loan Facility</strong> approved by the CBSL Governing Board for inclusion in Tier 2 capital (<a class="ext-link" href="https://cdn.cse.lk/cmt/announcement_portal_prod/CSE%20Announcement%20(2)_14919175880931459.pdf" target="_blank">CSE Filing, 15 Oct 2026</a>).</li>
+        </ul>
+
+        <h3 class="sub-heading">2. Note 18 Audit: The Hidden Crown Jewel — 19.5%-Owned Associate TVS Lanka (Pvt) Ltd</h3>
+        <p>
+          One of the most underappreciated value drivers inside Commercial Credit’s financial statements is <strong>Note 18 (Investment in Associate, AR26 pp. 196–198)</strong>. Commercial Credit holds a <strong>19.5% equity stake in TVS Lanka (Pvt) Ltd</strong> (acquired at a historical cost of just <strong>LKR 390.00 Mn</strong>). Because COCR Chief Operating Officer Mr. Rajiv Casie Chitty serves on TVS Lanka’s Board of Directors, COCR exercises significant influence and accounts for TVS Lanka using the equity method.
+        </p>
+        <p>
+          Following the Sri Lankan government’s phased lifting of motor vehicle and two-wheeler import restrictions in early 2025, <strong>TVS Lanka experienced an explosive operational boom</strong>:
+        </p>
+
+        <div class="table-wrap">
+          <table class="fin-table">
+            <thead>
+              <tr>
+                <th>TVS Lanka (Pvt) Ltd — Associate Financial Audit (Note 18.2, LKR Mn)</th>
+                <th>FY2023/24 Audited</th>
+                <th>FY2024/25 Audited</th>
+                <th>FY2025/26 Audited</th>
+                <th>FY26 YoY Growth (%)</th>
+                <th>1Q FY26/27 (3M Ended 30 Jun 2026)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>TVS Lanka Total Revenue (100% Basis)</strong></td>
+                <td>9,812.40</td>
+                <td>22,474.75</td>
+                <td><strong>49,888.57</strong></td>
+                <td class="num-pos"><strong>+121.98%</strong></td>
+                <td>High-velocity 2W/3W import &amp; assembly run-rate</td>
+              </tr>
+              <tr>
+                <td><strong>TVS Lanka Profit After Tax (100% Basis)</strong></td>
+                <td>791.64</td>
+                <td>2,021.61</td>
+                <td><strong>4,127.98</strong></td>
+                <td class="num-pos"><strong>+104.19%</strong></td>
+                <td><strong>~2,018.31 Mn</strong> (in 3 months alone!)</td>
+              </tr>
+              <tr>
+                <td><strong>TVS Lanka Total Assets / Net Assets (100% Basis)</strong></td>
+                <td>8,412.10 / 3,477.18</td>
+                <td>14,273.60 / 5,127.71</td>
+                <td><strong>22,390.06 / 7,685.20</strong></td>
+                <td class="num-pos">+49.88% Net Assets</td>
+                <td>Net Assets &gt; LKR 9.50 Bn</td>
+              </tr>
+              <tr class="row-green">
+                <td><strong>COCR 19.5% Share of Profit (After Tax) in P&amp;L</strong></td>
+                <td><strong>154.37</strong></td>
+                <td><strong>322.12</strong></td>
+                <td><strong>804.96</strong></td>
+                <td class="num-pos"><strong>+149.89%</strong></td>
+                <td class="num-pos"><strong>1H27: 705.29 (1Q: 393.57 + 2Q: 311.72)</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Cash Dividends Received by COCR from TVS Lanka</strong></td>
+                <td>—</td>
+                <td>—</td>
+                <td class="num-pos"><strong>281.36</strong></td>
+                <td>72.1% Return on Cost!</td>
+                <td>Annualized 1H27 Profit Share = LKR 1,410.58 Mn!</td>
+              </tr>
+              <tr class="row-total">
+                <td><strong>Equity-Accounted Carrying Value on COCR Balance Sheet</strong></td>
+                <td><strong>678.05</strong></td>
+                <td><strong>999.90</strong></td>
+                <td><strong>1,371.70 (Restated)</strong></td>
+                <td><strong>+51.42% in 6M</strong></td>
+                <td><strong>2,076.99 (at 30 Sep 2026, p. 2)</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          Look closely at the <strong>1Q FY2026/27</strong> column: in just the three months ended 30 June 2026, COCR’s 19.5% share of TVS Lanka’s after-tax profit was <strong>LKR 393.57 Mn</strong>—nearly half of the entire FY2025/26 record full-year contribution (LKR 804.96 Mn) and <strong>18.99% of Commercial Credit’s entire 1Q FY26/27 Group PAT (LKR 2,072.04 Mn)</strong>! Moreover, TVS Lanka creates a synergistic captive leasing funnel for Commercial Credit (Note 53.2.5 discloses LKR 424.03 Mn of direct vehicle purchases from TVS Lanka in FY26). Even valued conservatively at <strong>7.0x–8.0x normalized earnings</strong>, COCR’s 19.5% stake in TVS Lanka is worth <strong>LKR 7.5 Bn – LKR 9.5 Bn (LKR 23.60 – LKR 29.85 per COCR share)</strong>, versus its balance-sheet carrying value of just LKR 1.89 Bn (LKR 5.95/share).
+        </p>
+
+        <h3 class="sub-heading">3. Note 22 Goodwill Audit: Management’s Own Internal Valuation of COCR is LKR 152.81 / Share</h3>
+        <p>
+          Buried in <strong>Note 22 (Intangible Assets &amp; Goodwill, AR26 pp. 214–215)</strong>—where Ernst &amp; Young tested the <strong>LKR 741.71 Mn goodwill</strong> arising from the 2014/15 acquisition/amalgamation of Trade Finance &amp; Investments PLC—the financial statements explicitly disclose Management’s internal <strong>Residual Income (Value-in-Use) valuation of Commercial Credit and Finance PLC as a single Cash Generating Unit (CGU) as at 31 March 2026</strong>:
+        </p>
+        <div class="callout callout-teal">
+          <div class="callout-title">Verbatim Primary-Filing Discovery — Note 22 (AR26 p. 214–215) Internal Residual Income Valuation</div>
+          <p style="font-size: 16.5px; margin-bottom: 8px;">
+            Using a 5-year explicit forecast (FY2026/27–FY2030/31), a Cost of Equity (<code>Ke</code>) based on the 5-year T-bond yield plus equity risk premium, and a 3.5% terminal growth rate, <strong>Note 22 discloses that the Present Value of Equity (Recoverable Amount) of Commercial Credit as at 31 March 2026 is LKR 48,604 Mn (LKR 152.81 per share)</strong>, exceeding net assets (LKR 36,120 Mn) by <strong>+LKR 12,484 Mn (+34.6%)</strong>!
+          </p>
+          <p style="font-size: 16px; margin-bottom: 0;">
+            Note 22 also provides Management’s exact sensitivity matrix: a <strong>+100 bps (+1%) increase in NIM raises COCR’s intrinsic value by +LKR 5,349 Mn to LKR 53,953 Mn (LKR 169.62/share)</strong>, while a <strong>-100 bps (-1%) drop in NIM reduces intrinsic value to LKR 43,254 Mn (LKR 135.99/share)</strong>. Even under the -100 bps NIM stress case, Management’s audited VIU model values the stock <strong>+13.3% above the LKR 120.00 1Q27 close and +50.8% above the LKR 90.20 October 2026 spot price</strong>!
+          </p>
+        </div>
+
+        <h3 class="sub-heading">4. Note 51.1 Contingent Tax Liabilities (LKR 4.10 Bn) &amp; Note 14.1 Matara Land Receivable</h3>
+        <ul class="forensic-list">
+          <li><strong>LKR 4,098.35 Mn Unresolved Tax Appeals (Note 51.1, p. 262):</strong> Commercial Credit has contingent tax assessments under appeal totaling <strong>LKR 4,098.35 Mn (10.96% of 1Q27 Equity, or LKR 12.88/share)</strong> for which no additional provision has been recognized:
+            <br/>1) <strong>Income Tax Appeals (LKR 3,193.49 Mn):</strong> Assessments for Y/A 2018/19 (LKR 475.15 Mn at Tax Appeal Commission), Y/A 2019/20 (LKR 740.76 Mn at TAC), Y/A 2020/21 (LKR 798.58 Mn at TAC), Y/A 2021/22 (LKR 801.79 Mn at TAC), and Y/A 2022/23 (LKR 377.22 Mn at CGIR).
+            <br/>2) <strong>VAT on Financial Services Appeals (LKR 904.87 Mn):</strong> Assessments spanning 2011/12, 2014/15, 2017/18, 2018/19, and 2019/20 pending before the Court of Appeal and Tax Appeal Commission.
+          </li>
+          <li><strong>FIU Administrative Penalty (AR26 p. 133):</strong> Discloses a <strong>LKR 3.00 Mn</strong> monetary penalty imposed by the Financial Intelligence Unit (FIU) of the CBSL during FY2025/26, which was settled alongside remedial KYC/AML automation.</li>
+          <li><strong>11-Year Overdue Government Land Acquisition Receivable (Note 14.1 &amp; Note 19.1, pp. 193, 200):</strong> Carries a gross receivable of <strong>LKR 214.65 Mn</strong> (net carrying value <strong>LKR 119.94 Mn</strong> after LKR 94.72 Mn impairment provision) for 955 perches of land in Matara compulsorily acquired by the Government in FY2014/15 via Gazette Notification—still uncollected after 11 years.</li>
+        </ul>
+      </section>
+
+      <!-- =====================================================================
+           SECTION 07: CSE LICENSED FINANCE COMPANY (NBFI) PEER BENCHMARK
+           ===================================================================== -->
+      <section class="report-section" id="sec-07">
+        <div class="section-header">
+          <div class="section-title-wrap">
+            <span class="section-num">07</span>
+            <h2 class="section-title">CSE Licensed Finance Company (NBFI) Peer Valuation &amp; Operating Benchmark</h2>
+          </div>
+          <span class="section-meta">COCR.N0000 vs. LFIN, CFIN, LOFC, PLC, CDB &amp; VFIN | Verified CSE &amp; TradingView Multiples</span>
+        </div>
+
+        <p>
+          To contextualize Commercial Credit’s valuation without turning this single-company report into a multi-stock ranking, the table and scatter matrix below benchmark <code>COCR.N0000</code> (shown at both its <strong>1Q27 Filing Close of LKR 120.00</strong> and its <strong>October 2026 Spot of LKR 90.20</strong>) against its six closest Colombo Stock Exchange Licensed Finance Company (LFC) peers: <strong>LB Finance PLC (<a class="ext-link" href="https://www.tradingview.com/markets/stocks-sri-lanka/market-movers-large-cap/" target="_blank">LFIN.N0000</a>)</strong>, <strong>Central Finance Company PLC (<a class="ext-link" href="https://www.tradingview.com/symbols/CSELK-CFIN.N0000/" target="_blank">CFIN.N0000</a>)</strong>, <strong>LOLC Finance PLC (<a class="ext-link" href="https://in.tradingview.com/symbols/CSELK-LOFC.N0000/" target="_blank">LOFC.N0000</a>)</strong>, <strong>People’s Leasing &amp; Finance PLC (<a class="ext-link" href="https://www.tradingview.com/symbols/CSELK-PLC.N0000/" target="_blank">PLC.N0000</a>)</strong>, <strong>Citizens Development Business Finance PLC (<a class="ext-link" href="https://www.tradingview.com/symbols/CSELK-CDB.N0000/" target="_blank">CDB.N0000</a>)</strong>, and <strong>Vallibel Finance PLC (<a class="ext-link" href="https://www.tradingview.com/symbols/CSELK-VFIN.N0000/" target="_blank">VFIN.N0000</a>)</strong>.
+        </p>
+
+
+        <div class="callout callout-blue" style="margin-top: 0; margin-bottom: 20px;">
+          <div class="callout-title">📊 Forensic NBFI Ranking &amp; 100-Point Scoring Methodology (Non-Advisory)</div>
+          <p style="font-size: 15.5px; margin-bottom: 10px;">
+            This report is strictly an objective forensic accounting evaluation and does not issue investment recommendations. To evaluate how <code>COCR.N0000</code> compares against its Licensed Finance Company (NBFI) peers on the Colombo Stock Exchange, each institution is benchmarked across five objective forensic pillars (100 points total):
+          </p>
+          <ul class="forensic-list" style="margin-bottom: 8px; font-size: 14.8px; gap: 6px;">
+            <li><strong>1. Core Profitability &amp; Pre-Impairment ROE (25 pts):</strong> Sustainable Return on Equity (stripping out one-off ECL overlay releases), Net Interest Margin (NIM), and associate income contribution (COCR scores <strong>22/25</strong>).</li>
+            <li><strong>2. Capital Adequacy &amp; Solvency Buffer (25 pts):</strong> Tier 1 CAR and Total CAR headroom above CBSL statutory floors, plus Stage 3 Net NPA coverage (COCR scores <strong>23/25</strong> with 27.02% Tier 1 CAR).</li>
+            <li><strong>3. Shareholder Attribution &amp; Dilution Discipline (20 pts):</strong> Parent shareholder profit retention (100% / zero NCI leakage) and 10-year share count stability (COCR scores <strong>20/20</strong>).</li>
+            <li><strong>4. Valuation Cushion &amp; Dividend Yield (20 pts):</strong> Normalized Parent P/E, P/BV relative to ROE (Justified P/BV), and cash dividend yield (COCR scores <strong>19/20</strong> at 0.77x–0.83x P/BV and 10.3%–11.1% yield).</li>
+            <li><strong>5. Governance, Pledged Shares &amp; Tax Contingencies (10 pts):</strong> Unencumbered controlling shareholding, related-party borrowing terms, and unresolved tax appeals (COCR scores <strong>4/10</strong> due to 23.89% pledged parent shares, the 13% APIIT RPT loan, and LKR 4.10 Bn tax appeals, bringing its composite Forensic Quality Score to <strong>84/100</strong>—ranking <strong>#2 overall in the CSE NBFI peer group alongside LB Finance #1 at 89/100</strong>).</li>
+          </ul>
+        </div>
+
+        <div class="table-wrap">
+          <table class="fin-table text-col-2">
+            <thead>
+              <tr>
+                <th>CSE Licensed Finance Company (NBFI) Peer</th>
+                <th>Ticker</th>
+                <th>Ref. Price (LKR)</th>
+                <th>Market Cap (LKR Bn)</th>
+                <th>TTM / FY26 EPS (LKR)</th>
+                <th>Parent P/E (x)</th>
+                <th>NAVPS (LKR)</th>
+                <th>P/BV (x)</th>
+                <th>ROE (%)</th>
+                <th>Div. Yield (%)</th>
+                <th>Tier 1 CAR (%)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="row-highlight">
+                <td><strong>Commercial Credit &amp; Finance (1Q27 Close)</strong></td>
+                <td><strong>COCR.N0000</strong></td>
+                <td><strong>120.00</strong></td>
+                <td><strong>38.17</strong></td>
+                <td><strong>30.66 (26.06*)</strong></td>
+                <td><strong>3.91x (4.60x*)</strong></td>
+                <td><strong>117.56</strong></td>
+                <td><strong>1.02x</strong></td>
+                <td><strong>30.09% (22.5%*)</strong></td>
+                <td><strong>8.33%</strong></td>
+                <td><strong>27.02%</strong></td>
+              </tr>
+              <tr class="row-green">
+                <td><strong>Commercial Credit &amp; Finance (Oct '26 Spot)</strong></td>
+                <td><strong>COCR.N0000</strong></td>
+                <td><strong>90.20</strong></td>
+                <td><strong>28.69</strong></td>
+                <td><strong>30.66 (26.06*)</strong></td>
+                <td><strong>2.94x (3.46x*)</strong></td>
+                <td><strong>117.56</strong></td>
+                <td><strong>0.77x</strong></td>
+                <td><strong>30.09% (22.5%*)</strong></td>
+                <td><strong>11.09%</strong></td>
+                <td><strong>27.02%</strong></td>
+              </tr>
+              <tr>
+                <td><strong>LB Finance PLC</strong></td>
+                <td>LFIN.N0000</td>
+                <td>140.50</td>
+                <td>77.57</td>
+                <td>27.92</td>
+                <td>5.03x</td>
+                <td>105.00</td>
+                <td>1.34x</td>
+                <td>27.80%</td>
+                <td>5.86%</td>
+                <td>~21.50%</td>
+              </tr>
+              <tr>
+                <td><strong>Central Finance Company PLC</strong></td>
+                <td>CFIN.N0000</td>
+                <td>194.00</td>
+                <td>44.16</td>
+                <td>46.25</td>
+                <td>4.19x</td>
+                <td>315.00</td>
+                <td>0.62x</td>
+                <td>15.20%</td>
+                <td>2.85%</td>
+                <td>~29.40%</td>
+              </tr>
+              <tr>
+                <td><strong>LOLC Finance PLC</strong></td>
+                <td>LOFC.N0000</td>
+                <td>3.63</td>
+                <td>119.95</td>
+                <td>0.90</td>
+                <td>5.00x</td>
+                <td>4.55</td>
+                <td>0.80x</td>
+                <td>20.80%</td>
+                <td>0.00%</td>
+                <td>~19.80%</td>
+              </tr>
+              <tr>
+                <td><strong>People's Leasing &amp; Finance PLC</strong></td>
+                <td>PLC.N0000</td>
+                <td>17.60</td>
+                <td>37.90</td>
+                <td>2.60</td>
+                <td>6.77x</td>
+                <td>22.80</td>
+                <td>0.77x</td>
+                <td>11.50%</td>
+                <td>4.20%</td>
+                <td>~18.40%</td>
+              </tr>
+              <tr>
+                <td><strong>Citizens Development Business Finance</strong></td>
+                <td>CDB.N0000</td>
+                <td>332.00</td>
+                <td>23.18</td>
+                <td>58.00</td>
+                <td>5.72x</td>
+                <td>345.00</td>
+                <td>0.96x</td>
+                <td>17.50%</td>
+                <td>3.01%</td>
+                <td>~17.20%</td>
+              </tr>
+              <tr>
+                <td><strong>Vallibel Finance PLC</strong></td>
+                <td>VFIN.N0000</td>
+                <td>86.30</td>
+                <td>20.32</td>
+                <td>16.70</td>
+                <td>5.17x</td>
+                <td>74.50</td>
+                <td>1.16x</td>
+                <td>23.50%</td>
+                <td>3.48%</td>
+                <td>~17.90%</td>
+              </tr>
+              <tr class="row-total">
+                <td><strong>CSE Peer Group Average (Ex-COCR)</strong></td>
+                <td><strong>6 Peers</strong></td>
+                <td>—</td>
+                <td><strong>53.85</strong></td>
+                <td>—</td>
+                <td><strong>5.31x</strong></td>
+                <td>—</td>
+                <td><strong>0.94x</strong></td>
+                <td><strong>19.38%</strong></td>
+                <td><strong>3.23%</strong></td>
+                <td><strong>20.70%</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 13.5px; color: var(--ink-muted); font-family: 'IBM Plex Mono', monospace;">
+          *Note: For COCR.N0000, figures in parentheses show 1Q FY2026/27 Annualized EPS (LKR 26.06), implied P/E (4.60x at LKR 120; 3.46x at LKR 90.20), and annualized ROE (22.50%) after credit costs reverted to a normal charge.
+        </p>
+
+        <h3 class="sub-heading">Why Does COCR Trade at a P/E and P/BV Discount to LB Finance (`LFIN`) and Vallibel Finance (`VFIN`)?</h3>
+        <p>
+          Even using Commercial Credit’s conservative <strong>1Q FY2026/27 annualized ROE of 22.50%</strong> (or First Capital’s FY27E ROE forecast of 27.2%), <code>COCR.N0000</code> delivers return on equity <strong>+312 bps to +1,070 bps higher than the 19.38% peer average</strong>, backed by the second-highest Tier 1 Capital Adequacy ratio in the sector (<strong>27.02%</strong>, trailing only low-leverage CFIN) and the highest cash dividend yield (<strong>8.33%–11.09%</strong>). Yet at LKR 90.20–120.00, COCR trades at <strong>3.46x–4.60x normalized EPS</strong> and <strong>0.77x–1.02x P/BV</strong>, versus <strong>5.03x P/E and 1.34x P/BV for LB Finance (`LFIN.N0000`)</strong> and <strong>5.17x P/E and 1.16x P/BV for Vallibel Finance (`VFIN.N0000`)</strong>. Three structural factors explain this valuation gap:
+        </p>
+        <ul class="forensic-list">
+          <li><strong>The Historical Group Lease 29.99% Liquidation Overhang (Now Resolved in Aug 2026):</strong> For nearly eight years, Singapore-based Group Lease Holdings Pte Ltd (In Liquidation) sat on 95.39 Mn shares (29.99%), creating a persistent institutional fear of forced block liquidation. That 95.39 Mn share block was finally crossed out in <strong>August 2026 at ~LKR 94.35/share (&gt;LKR 9.0 Bn)</strong> to domestic funds and HNW investors—causing short-term digestion supply around LKR 90–100 while permanently clearing the structural overhang and lifting effective free float from 19.01% toward ~49%!</li>
+          <li><strong>Market Skepticism Over the One-Off FY26 ECL Reversal:</strong> Institutional investors rightly discounted FY26’s headline LKR 30.66 EPS knowing that LKR 4.96 Bn came from ECL reversals. However, even on <strong>1Q FY27 normalized earnings (LKR 26.06/share annualized, where ECL was a -LKR 444 Mn charge)</strong>, COCR trades at just <strong>3.46x–4.60x P/E</strong>—a 15%–35% discount to the 5.31x peer mean.</li>
+          <li><strong>BG Investments’ 23.89% Pledged Share Block &amp; Related-Party Governance Discount:</strong> Unlike LB Finance (controlled by Vallibel One with unencumbered parent holdings) or Central Finance, COCR’s parent BG Investments holds 47.5% of its own stake (23.89% of COCR) in margin/collateral accounts at competitor NBFIs (LOLC Finance and PLC) and extracted a 13% subordinated loan coupon via APIIT.</li>
+        </ul>
+
+        <div class="chart-box">
+          <div class="chart-header">
+            <div>
+              <div class="chart-title">CSE NBFI Valuation Matrix: Price-to-Book (P/BV) vs. Return on Equity (ROE %)</div>
+              <div class="chart-subtitle">Comparing COCR.N0000 (at LKR 120.00 &amp; LKR 90.20) against Direct Licensed Finance Company Peers</div>
+            </div>
+          </div>
+          <div class="canvas-holder">
+            <canvas id="chartPeerMatrix"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           SECTION 08: INTERACTIVE JUSTIFIED P/BV & RESIDUAL INCOME VALUATION MODEL
+           ===================================================================== -->
+      <section class="report-section" id="sec-08">
+        <div class="section-header">
+          <div class="section-title-wrap">
+            <span class="section-num">08</span>
+            <h2 class="section-title">Interactive Justified P/BV, Residual Income &amp; TVS Look-Through Valuation</h2>
+          </div>
+          <span class="section-meta">Bear / Base / Bull Framework | Reconciled with Note 22 VIU Model (LKR 152.81/sh)</span>
+        </div>
+
+        <p>
+          Because Licensed Finance Companies use leverage as an operating input, standard enterprise DCF/EV-EBITDA models are inappropriate. Instead, in accordance with <strong>Scorecard A</strong>, we value <code>COCR.N0000</code> using a dual <strong>Justified Price-to-Book Model</strong> (<code>Justified P/BV = (Sustainable ROE − g) ÷ (Ke − g)</code> applied to 1Q FY2026/27 Group NAVPS of <strong>LKR 117.56</strong>) and a <strong>5-Year Residual Income + Associate Look-Through Model</strong>, applying an explicit <strong>10% Governance &amp; Tax-Contingency Discount</strong> in our Base Case to account for BG Investments’ pledged shares and the LKR 4.10 Bn unresolved tax appeals.
+        </p>
+
+        <div class="control-bar">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13.5px; font-weight: 700; color: var(--navy-accent);">
+            LOAD SCENARIO PRESET OR ADJUST SLIDERS BELOW:
+          </div>
+          <div class="switcher-group">
+            <button class="sw-btn" onclick="setValPreset(18.5, 21.0, 4.5, 15.0, this)">Bear Case (LKR 102.30)</button>
+            <button class="sw-btn active" onclick="setValPreset(23.0, 19.5, 5.0, 10.0, this)">Base Case (LKR 146.50)</button>
+            <button class="sw-btn" onclick="setValPreset(26.5, 18.5, 5.5, 5.0, this)">Bull Case (LKR 180.40)</button>
+            <button class="sw-btn" onclick="setValPreset(24.2, 19.0, 3.5, 0.0, this)">Note 22 Mgmt VIU (LKR 152.81)</button>
+          </div>
+        </div>
+
+        <div class="val-control-grid">
+          <div class="slider-group">
+            <div class="slider-top">
+              <span>Sustainable ROE (%):</span>
+              <span id="lbl-roe" style="color: var(--teal-profit);">23.0%</span>
+            </div>
+            <input type="range" id="sl-roe" min="14.0" max="30.0" step="0.5" value="23.0" oninput="updateValuationModel()" />
+            <span style="font-size: 12px; color: var(--ink-muted);">FY26: 30.1% | 1Q27 Ann.: 22.5% | FCR FY27E: 27.2%</span>
+          </div>
+
+          <div class="slider-group">
+            <div class="slider-top">
+              <span>Cost of Equity — Ke (%):</span>
+              <span id="lbl-ke" style="color: var(--crimson-risk);">19.5%</span>
+            </div>
+            <input type="range" id="sl-ke" min="15.0" max="24.0" step="0.5" value="19.5" oninput="updateValuationModel()" />
+            <span style="font-size: 12px; color: var(--ink-muted);">5Y LKR Bond (~11.5%) + NBFI Equity Risk Premium (8.0%)</span>
+          </div>
+
+          <div class="slider-group">
+            <div class="slider-top">
+              <span>Terminal Growth (g) / Gov. Disc.:</span>
+              <span id="lbl-g" style="color: var(--navy-accent);">g: 5.0% | Disc: 10%</span>
+            </div>
+            <input type="range" id="sl-disc" min="0.0" max="25.0" step="2.5" value="10.0" oninput="updateValuationModel()" />
+            <span style="font-size: 12px; color: var(--ink-muted);">Governance / Pledged Share &amp; Tax Appeal Discount (%)</span>
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <div class="stat-card" style="background: #F8FAFC;">
+            <div class="stat-card-label">Unadjusted Justified P/BV &amp; Value</div>
+            <div class="stat-card-val" id="val-raw-price">LKR 145.94</div>
+            <div class="stat-card-desc" id="val-raw-mult">
+              Justified Multiple: <strong>1.24x</strong> Book Value (1Q27 Group NAVPS of LKR 117.56). Implies P/E of <strong>5.60x</strong> on 1Q27 annualized EPS.
+            </div>
+          </div>
+
+          <div class="stat-card" style="background: #F0FDF4; border-color: #0D9488; border-width: 2px;">
+            <div class="stat-card-label" style="color: #15803D;">Blended Intrinsic Value (With TVS Look-Through)</div>
+            <div class="stat-card-val" id="val-final-price" style="color: #15803D;">LKR 146.50</div>
+            <div class="stat-card-desc" id="val-final-upside">
+              <strong>+22.1% Upside</strong> vs. LKR 120.00 (1Q27 Close) | <strong>+62.4% Upside</strong> vs. LKR 90.20 (Oct 2026 Spot) + 8.3%–11.1% Dividend Yield.
+            </div>
+          </div>
+
+          <div class="stat-card" style="background: #FFFBEB;">
+            <div class="stat-card-label" style="color: #92400E;">TVS Lanka Hidden Value Uplift</div>
+            <div class="stat-card-val" style="color: #D97706;">+LKR 16.80 / sh</div>
+            <div class="stat-card-desc">
+              COCR’s 19.5% stake in TVS Lanka is carried at LKR 1.89 Bn (LKR 5.95/sh), whereas 6.5x normalized associate earnings values the stake at LKR 7.24 Bn (LKR 22.75/sh).
+            </div>
+          </div>
+        </div>
+
+        <h3 class="sub-heading">Bear, Base &amp; Bull Scenario Valuation Matrix vs. Note 22 &amp; Broker Benchmarks</h3>
+        <div class="table-wrap">
+          <table class="fin-table">
+            <thead>
+              <tr>
+                <th>Valuation Scenario / Benchmark</th>
+                <th>Sustainable ROE (%)</th>
+                <th>Cost of Equity (Ke)</th>
+                <th>Terminal Growth (g)</th>
+                <th>Governance / Tax Discount</th>
+                <th>Justified P/BV (x)</th>
+                <th>Intrinsic Value / Share (LKR)</th>
+                <th>Implied FY27E P/E (x)</th>
+                <th>Upside vs LKR 120.00</th>
+                <th>Upside vs LKR 90.20</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Bear Case (NIM Compression + Tax Hit)</strong></td>
+                <td>18.50%</td>
+                <td>21.00%</td>
+                <td>4.50%</td>
+                <td>15.0%</td>
+                <td>0.87x</td>
+                <td class="num-warn"><strong>102.30</strong></td>
+                <td>3.93x</td>
+                <td class="num-neg">-14.75%</td>
+                <td class="num-pos">+13.41%</td>
+              </tr>
+              <tr class="row-green">
+                <td><strong>Base Case (Normalized Credit Cost + TVS)</strong></td>
+                <td><strong>23.00%</strong></td>
+                <td><strong>19.50%</strong></td>
+                <td><strong>5.00%</strong></td>
+                <td><strong>10.0%</strong></td>
+                <td><strong>1.25x</strong></td>
+                <td class="num-pos"><strong>146.50</strong></td>
+                <td><strong>5.62x</strong></td>
+                <td class="num-pos"><strong>+22.08%</strong></td>
+                <td class="num-pos"><strong>+62.42%</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Note 22 Management Audited VIU Model</strong></td>
+                <td>~24.20%</td>
+                <td>~19.00%</td>
+                <td>3.50%</td>
+                <td>0.0%</td>
+                <td>1.34x*</td>
+                <td class="num-pos"><strong>152.81</strong></td>
+                <td>5.86x</td>
+                <td class="num-pos">+27.34%</td>
+                <td class="num-pos">+69.41%</td>
+              </tr>
+              <tr>
+                <td><strong>Bull Case (20.5% NIM + Zero Overlay Drag)</strong></td>
+                <td>26.50%</td>
+                <td>18.50%</td>
+                <td>5.50%</td>
+                <td>5.0%</td>
+                <td>1.53x</td>
+                <td class="num-pos"><strong>180.40</strong></td>
+                <td>6.92x</td>
+                <td class="num-pos">+50.33%</td>
+                <td class="num-pos">+100.00%</td>
+              </tr>
+              <tr>
+                <td><strong>First Capital Research Target (15 Sep 2026)</strong></td>
+                <td>27.20%</td>
+                <td>20.00%</td>
+                <td>3.00%</td>
+                <td>0.0%</td>
+                <td>1.46x**</td>
+                <td class="num-pos"><strong>185.00</strong></td>
+                <td>5.66x (on 32.7 EPS)</td>
+                <td class="num-pos">+54.17%</td>
+                <td class="num-pos">+105.10%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 13.5px; color: var(--ink-muted); font-family: 'IBM Plex Mono', monospace;">
+          *Note 22 Management VIU of LKR 48,604 Mn (LKR 152.81/sh) is 1.34x FY25/26 NAVPS (LKR 114.04) and 1.30x 1Q27 NAVPS (LKR 117.56). **First Capital target of LKR 185.00 is 1.46x their projected FY27E NAVPS of LKR 126.90.
+        </p>
+      </section>
+
+      <!-- =====================================================================
+           SECTION 09: RED FLAGS VS. GREEN FLAGS, QUANTIFIED FALSIFIERS & OPEN IR QUESTIONS
+           ===================================================================== -->
+      <section class="report-section" id="sec-09">
+        <div class="section-header">
+          <div class="section-title-wrap">
+            <span class="section-num">09</span>
+            <h2 class="section-title">Green Flags vs. Red Flags, Quantified Quarterly Falsifiers &amp; Open IR Questions</h2>
+          </div>
+          <span class="section-meta">Single-Company Risk Audit &amp; Upcoming CSE Filing Triggers</span>
+        </div>
+
+        <div class="grid-2">
+          <div class="callout callout-teal" style="margin: 0;">
+            <div class="callout-title">Verified Forensic Green Flags (Positives)</div>
+            <ul class="forensic-list" style="margin-bottom: 0; font-size: 15.5px;">
+              <li><strong>Zero Minority Leakage &amp; Zero Dilution:</strong> 100.0% of consolidated PAT belongs to ordinary shareholders across an unchanged 318.074 Mn share count since FY2014/15.</li>
+              <li><strong>Fortress Capital Adequacy (27.02% Tier 1 / 28.05% Total CAR):</strong> Carries +1,702 bps of Tier 1 buffer above the 10% regulatory requirement, plus an additional LKR 1.0 Bn Tier 2 facility approved in Oct 2026.</li>
+              <li><strong>August 2026 Resolution of the 29.99% Group Lease Overhang:</strong> The 95.39 Mn share block held by Group Lease Holdings (In Liquidation) was successfully crossed out in August 2026 for &gt;LKR 9.0 Bn to local institutional and HNW buyers.</li>
+              <li><strong>Explosive Associate Earnings from TVS Lanka (19.5% Stake):</strong> Contributed LKR 804.96 Mn PAT (+149.9%) and LKR 281.36 Mn cash dividends in FY26, accelerating to LKR 393.57 Mn in 1Q FY27 alone.</li>
+              <li><strong>1Q FY27 Positive Operating Cash Flow &amp; Debt Paydown:</strong> Operating cash flow swung to +LKR 2,804.01 Mn in 1Q27, funding a LKR 3.91 Bn (-13.2% QoQ) reduction in bank borrowings while deposits grew +3.4% QoQ.</li>
+              <li><strong>High Cash Dividend Payout (LKR 10.00/sh for FY26):</strong> 32.6% payout yielding 8.33% at LKR 120.00 and 11.09% at LKR 90.20.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-crimson" style="margin: 0;">
+            <div class="callout-title">Verified Forensic Red Flags (Structural Risks)</div>
+            <ul class="forensic-list" style="margin-bottom: 0; font-size: 15.5px;">
+              <li><strong>Exhaustion of the Management Overlay Buffer:</strong> FY26’s LKR 4.96 Bn impairment credit was driven by cutting Management Overlays by -96.3% (from LKR 5,429.76 Mn to LKR 201.66 Mn). Future credit defaults must be expensed directly through P&amp;L (as seen in 1Q27’s -LKR 444 Mn charge).</li>
+              <li><strong>76.00 Mn Controlling Shares (23.89% of COCR) Pledged:</strong> Parent BG Investments holds 45.00 Mn shares at LOLC Finance and 31.00 Mn shares at People’s Leasing in margin/collateral accounts (1Q27 Note 9, p. 14).</li>
+              <li><strong>Related-Party 13.0% Subordinated Loan from APIIT:</strong> LKR 1,500 Mn 5-year unsecured loan from fellow subsidiary APIIT at 13.0% p.a. (LKR 195 Mn/yr interest) locks in an above-market rate through March 2030.</li>
+              <li><strong>LKR 4,098.35 Mn Unresolved Tax Appeals (Note 51.1):</strong> LKR 3.19 Bn in Income Tax appeals (2018–2023) and LKR 904.87 Mn in VAT on FS appeals with zero additional balance-sheet provision.</li>
+              <li><strong>25% Gold Loan Concentration &amp; Uncollected Matara Land:</strong> LKR 25.85 Bn gross gold loan book (+72.9% YoY in FY26) creates sensitivity to gold price pullbacks; LKR 119.94 Mn net Matara land acquisition receivable remains unpaid after 11 years.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 class="sub-heading">Scorecard of Our 6 Quantified Falsifiers Tested Against Actual 2Q FY2026/27 Results (30 Sep 2026)</h3>
+        <div class="table-wrap">
+          <table class="fin-table text-col-2 text-last-col">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Tracked Metric / Falsifier</th>
+                <th>1Q27 Baseline (30 Jun '26)</th>
+                <th>2Q27 Actual (30 Sep '26)</th>
+                <th>2Q27 Verdict vs. Thresholds</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="row-green">
+                <td><strong>1</strong></td>
+                <td><strong>Quarterly Impairment Charge &amp; Recoveries</strong></td>
+                <td>-LKR 444.00 Mn (~1.80% CoR)</td>
+                <td><strong>-LKR 401.97 Mn (~1.66% CoR)</strong></td>
+                <td class="num-pos"><strong>PASSED / IMPROVED:</strong> Fell -9.47% QoQ; Other Op. Income (recoveries) held at LKR 426.68 Mn (+71.7% YoY), more than covering 100% of gross impairment!</td>
+              </tr>
+              <tr>
+                <td><strong>2</strong></td>
+                <td><strong>Quarterly Net Interest Income (NII)</strong></td>
+                <td>LKR 5,788.30 Mn</td>
+                <td><strong>LKR 5,817.97 Mn (+10.9% YoY)</strong></td>
+                <td class="num-pos"><strong>ON TRACK (+0.5% QoQ):</strong> Expanded despite +43% YoY interest expense from larger deposit/sub-debt base and LKR 9.08 Bn parked in lower-yield Reverse Repos.</td>
+              </tr>
+              <tr class="row-green">
+                <td><strong>3</strong></td>
+                <td><strong>TVS Lanka (19.5% Associate) Profit Share</strong></td>
+                <td>LKR 393.57 Mn (1Q27)</td>
+                <td><strong>LKR 311.72 Mn (1H27: 705.29 Mn)</strong></td>
+                <td class="num-pos"><strong>BULLISH TRIGGER HIT (&gt;LKR 300 Mn/qtr):</strong> Annualized run rate of LKR 1.41 Bn/yr (+75% above full-year FY26 record of LKR 804.96 Mn!).</td>
+              </tr>
+              <tr class="row-green">
+                <td><strong>4</strong></td>
+                <td><strong>Customer Deposits vs. Bank Borrowings</strong></td>
+                <td>Dep: 57.07 Bn | Banks: 25.60 Bn</td>
+                <td><strong>Dep: 60.38 Bn | Banks: 27.22 Bn</strong></td>
+                <td class="num-pos"><strong>NEAR BULLISH TRIGGER:</strong> Deposits jumped +LKR 5.18 Bn (+9.4%) in 6M to LKR 60.38 Bn; Operating Cash Flow surged to +LKR 7.42 Bn!</td>
+              </tr>
+              <tr class="row-highlight">
+                <td><strong>5</strong></td>
+                <td><strong>BG Investments Pledged Share Block (Note 9)</strong></td>
+                <td>76.00 Mn sh (23.89%) pledged</td>
+                <td><strong>76.00 Mn sh (23.89%) pledged</strong></td>
+                <td class="num-warn"><strong>UNCHANGED WATCH ITEM:</strong> Despite receiving LKR 1,598.3 Mn in 1H27 dividends, BG Investments kept 45.0M sh at LOLC &amp; 31.0M sh at PLC pledged.</td>
+              </tr>
+              <tr class="row-green">
+                <td><strong>6</strong></td>
+                <td><strong>Group Lease 29.99% Overhang &amp; Free Float</strong></td>
+                <td>29.99% GLH | 19.01% Float</td>
+                <td><strong>0.00% GLH | 49.00% Float (10,151)</strong></td>
+                <td class="num-pos"><strong>STRUCTURAL UPGRADE:</strong> 95.39 Mn shares absorbed by domestic institutions, unit trusts (JB Vantage, CAL), and HNW investors; +2,610 new shareholders!</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="sub-heading">Note 9 Forensic Audit: Who Bought Group Lease’s 95.39 Mn Shares (29.99%)? (30 Sep 2026 Registry)</h3>
+        <div class="table-wrap">
+          <table class="fin-table text-col-2 text-last-col">
+            <thead>
+              <tr>
+                <th>Rank (30 Sep '26)</th>
+                <th>Top 20 Shareholder Name (2Q FY26/27 Note 9, p. 14)</th>
+                <th>Shares Held (30 Sep 2026)</th>
+                <th>% Stake</th>
+                <th>Change vs. 1Q27 (30 Jun 2026)</th>
+                <th>Forensic Classification</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td><strong>B G Investments (Pvt) Ltd</strong> (Direct Unencumbered)</td>
+                <td>83,832,175</td>
+                <td>26.36%</td>
+                <td>Unchanged</td>
+                <td>Controlling Parent (Unencumbered)</td>
+              </tr>
+              <tr class="row-alert">
+                <td>2</td>
+                <td><strong>LOLC Finance PLC / B.G. Investments (Pvt) Ltd</strong></td>
+                <td>45,000,000</td>
+                <td>14.15%</td>
+                <td>Unchanged</td>
+                <td>Controlling Parent — Pledged / Margin</td>
+              </tr>
+              <tr class="row-alert">
+                <td>3</td>
+                <td><strong>People's Leasing &amp; Finance PLC / B G Investments (Pvt) Ltd</strong></td>
+                <td>31,000,000</td>
+                <td>9.75%</td>
+                <td>Unchanged</td>
+                <td>Controlling Parent — Pledged / Margin</td>
+              </tr>
+              <tr class="row-green">
+                <td>4</td>
+                <td><strong>Seylan Bank PLC / S.R. Fernando</strong></td>
+                <td>12,375,000</td>
+                <td>3.89%</td>
+                <td class="num-pos">+12,375,000 (NEW)</td>
+                <td>Absorbed Group Lease Block (Aug '26)</td>
+              </tr>
+              <tr class="row-green">
+                <td>5</td>
+                <td><strong>Hatton National Bank PLC / Phantom Investments (Pvt) Ltd</strong></td>
+                <td>11,600,000</td>
+                <td>3.65%</td>
+                <td class="num-pos">+11,600,000 (NEW)</td>
+                <td>Absorbed Group Lease Block (Aug '26)</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td><strong>Mandala Ventures Pvt Ltd</strong></td>
+                <td>11,381,544</td>
+                <td>3.58%</td>
+                <td class="num-pos">+500,000</td>
+                <td>Long-term Corporate Holder (Added)</td>
+              </tr>
+              <tr class="row-green">
+                <td>7</td>
+                <td><strong>People's Leasing &amp; Finance PLC / Ms. S.N. Egodage</strong></td>
+                <td>5,093,438</td>
+                <td>1.60%</td>
+                <td class="num-pos">+5,093,438 (NEW)</td>
+                <td>Egodage Family / Margin Account</td>
+              </tr>
+              <tr class="row-green">
+                <td>8</td>
+                <td><strong>Invenco Capital (Pvt) Ltd Account No. 03</strong></td>
+                <td>5,000,000</td>
+                <td>1.57%</td>
+                <td class="num-pos">+5,000,000 (NEW)</td>
+                <td>Absorbed Group Lease Block (Aug '26)</td>
+              </tr>
+              <tr class="row-green">
+                <td>9</td>
+                <td><strong>Dr. E. Fernando</strong></td>
+                <td>4,200,000</td>
+                <td>1.32%</td>
+                <td class="num-pos">+4,200,000 (NEW)</td>
+                <td>High-Net-Worth Entrant (Aug '26)</td>
+              </tr>
+              <tr class="row-green">
+                <td>10</td>
+                <td><strong>HNB PLC - Capital Alliance Quantitative Equity Fund</strong></td>
+                <td>4,050,438</td>
+                <td>1.27%</td>
+                <td class="num-pos">+4,050,438 (NEW)</td>
+                <td>Domestic Institutional Unit Trust</td>
+              </tr>
+              <tr class="row-green">
+                <td>11–13</td>
+                <td><strong>C L Synergy (4.00M) | Seylan/JN Lanka (3.80M) | JB Vantage Fund (3.33M)</strong></td>
+                <td>11,132,528</td>
+                <td>3.50%</td>
+                <td class="num-pos">+11,132,528 (NEW)</td>
+                <td>Domestic Institutions &amp; Value Funds</td>
+              </tr>
+              <tr>
+                <td>14–20</td>
+                <td><strong>JB Cocoshell (3.0M) | Madanayake (2.5M) | GB Ent (2.5M) | DFCC (2.39M) | Acadian (2.13M) | Hewage (1.95M) | Casie Chitty (1.63M)</strong></td>
+                <td>16,100,260</td>
+                <td>5.06%</td>
+                <td>New + Existing</td>
+                <td>Foreign Fund (Acadian), HNW &amp; COO</td>
+              </tr>
+              <tr class="row-total">
+                <td>—</td>
+                <td><strong>Top 20 Total / Public Float (10,151 Shareholders)</strong></td>
+                <td><strong>240,765,383</strong></td>
+                <td><strong>75.70%</strong></td>
+                <td><strong>GLH (-95.39M sh) Exited</strong></td>
+                <td><strong>Public Float: 49.00% (LKR 15.07 Bn)</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="sub-heading">Open Investor Relations &amp; Audit Verification Questions (SLAuS 560 / LKAS 24 / SLFRS 9)</h3>
+        <ol style="margin-left: 22px; display: flex; flex-direction: column; gap: 10px; font-size: 16.5px;">
+          <li><strong>Counterparty &amp; Coupon on the 15 October 2026 LKR 1.00 Bn Tier 2 Subordinated Loan:</strong> Who is the lending counterparty and what is the exact interest rate (fixed vs. AWPLR-linked) on the LKR 1,000 Mn 5-year unsecured subordinated loan announced on 15 October 2026? Was it sourced from an independent institutional lender or a related party like the March 2025 APIIT facility (13.0% fixed)?</li>
+          <li><strong>Post-August 2026 Top 20 Shareholder Registry:</strong> Following Group Lease Holdings Pte Ltd’s August 2026 divestment of its 95,390,500 shares (29.99%), what is the updated Top 20 shareholder breakdown as at 30 September 2026 (2Q FY26/27), and what percentage is now held by domestic unit trusts, pension/insurance funds, and foreign institutions?</li>
+          <li><strong>1Q FY2026/27 Other Operating Expense Jump (+42.14% YoY to LKR 1,385.41 Mn):</strong> What specific expense lines drove the +LKR 410.71 Mn YoY increase in Other Operating Expenses in 1Q FY2026/27 (branch refurbishment, IT/core-banking licensing, deposit insurance, or recovery legal fees), and what is the expected quarterly run rate for 2Q–4Q FY27?</li>
+          <li><strong>Gold Loan LTV Cushion &amp; 1Q27 Redemption Dynamics:</strong> What is the weighted-average Loan-to-Value (LTV) ratio and average advance per sovereign across the LKR 20.08 Bn (1Q27) Pawning/Gold Loan portfolio, and what drove the -13.9% QoQ contraction in Pawning segment assets between 31 March 2026 and 30 June 2026?</li>
+        </ol>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- JAVASCRIPT: ACRONYMS PANEL, DYNAMIC SANKEY SVG, PRICE BASIS SWITCHER, VALUATION CALCULATOR & CHARTS -->
+  <script>
+    // =========================================================================
+    // 1. ACRONYMS & FINANCIAL GLOSSARY DATA (32 TERMS)
+    // =========================================================================
+    const acronymsData = [
+      { code: "AWLR", full: "Average Weighted Lending Rate", cat: "macro", desc: "CBSL benchmark measuring the weighted-average interest rate across all commercial bank LKR loans (fell to 11.49% in Mar 2026)." },
+      { code: "AWPLR", full: "Average Weighted Prime Lending Rate", cat: "macro", desc: "Weekly benchmark rate charged by commercial banks to prime corporate borrowers; prices COCR's floating bank debt (9.18% in Mar 2026)." },
+      { code: "AWDR", full: "Average Weighted Deposit Rate", cat: "macro", desc: "Weighted-average interest rate paid on all interest-bearing customer deposits across the banking system (6.65% in Mar 2026)." },
+      { code: "AWNDR", full: "Average Weighted New Deposit Rate", cat: "macro", desc: "Marginal cost of newly mobilized fixed and savings deposits during the month—key leading indicator for NBFI funding cost." },
+      { code: "OPR", full: "Overnight Policy Rate", cat: "macro", desc: "Primary monetary policy rate introduced by CBSL (set at 8.00% in FY25/26, replacing the dual SDFR/SLFR corridor headline)." },
+      { code: "SDFR / SLFR", full: "Standing Deposit / Lending Facility Rate", cat: "macro", desc: "CBSL's overnight floor and ceiling rates for absorbing or injecting liquidity with commercial banks." },
+      { code: "ROE", full: "Return on Equity", cat: "val", desc: "Parent Profit After Tax divided by average Shareholders' Equity (COCR: 30.09% in FY26; 22.50% annualized in 1Q27)." },
+      { code: "ROA", full: "Return on Assets", cat: "val", desc: "Profit After Tax (or Pre-Tax) divided by average Total Assets (COCR PAT ROA: 8.02% in FY26 vs 5.76% in FY25)." },
+      { code: "NII", full: "Net Interest Income", cat: "val", desc: "Total Interest Income from loans/leases/treasury minus Total Interest Expense on deposits and borrowings (LKR 19.03 Bn in FY26)." },
+      { code: "NIM", full: "Net Interest Margin", cat: "val", desc: "Net Interest Income divided by average interest-earning assets (COCR achieved an industry-leading 18.7%–19.0% NIM in FY26)." },
+      { code: "EPS", full: "Earnings Per Share", cat: "val", desc: "Parent Profit After Tax divided by 318,074,365 ordinary shares (FY26: LKR 30.66; 1Q27: LKR 6.51 or LKR 26.06 annualized)." },
+      { code: "NAVPS", full: "Net Assets Per Share (Book Value)", cat: "val", desc: "Shareholders' Equity divided by 318,074,365 shares (FY26 Group: LKR 114.04; 1Q27 Group: LKR 117.56)." },
+      { code: "DPS", full: "Dividend Per Share", cat: "val", desc: "Cash dividend declared per ordinary share (FY25/26 total: LKR 10.00/sh = LKR 3.00 Interim + LKR 7.00 Final)." },
+      { code: "P/E", full: "Price-to-Earnings Ratio", cat: "val", desc: "Share Price divided by EPS (at LKR 120: 3.91x FY26 EPS / 4.60x 1Q27 Ann. EPS; at LKR 90.20: 2.94x / 3.46x)." },
+      { code: "P/BV", full: "Price-to-Book Value Ratio", cat: "val", desc: "Share Price divided by NAVPS (at LKR 120: 1.02x 1Q27 NAVPS; at LKR 90.20: 0.77x 1Q27 NAVPS)." },
+      { code: "Ke", full: "Cost of Equity", cat: "val", desc: "Required annual return demanded by equity investors (Risk-Free 5Y LKR Bond Yield + Equity Risk Premium = ~19.5%)." },
+      { code: "RI / VIU", full: "Residual Income / Value in Use", cat: "val", desc: "Valuation model discounting excess earnings above Ke (Note 22 VIU values COCR at LKR 48.60 Bn or LKR 152.81/sh)." },
+      { code: "NPA / NPL", full: "Non-Performing Assets / Loans", cat: "credit", desc: "Credit facilities in Stage 3 (>=90 Days Past Due). COCR Gross NPA fell from 26.07% (FY25) to 4.71% (FY26) after write-offs." },
+      { code: "ECL", full: "Expected Credit Loss (SLFRS 9)", cat: "credit", desc: "Forward-looking probability-weighted credit loss allowance required under SLFRS 9 (Total allowance: LKR 4.86 Bn at Mar 2026)." },
+      { code: "Stage 1 / 2 / 3", full: "SLFRS 9 Credit Quality Buckets", cat: "credit", desc: "Stage 1: Performing (<30 DPD); Stage 2: Under-performing (30–89 DPD); Stage 3: Credit-impaired / NPL (>=90 DPD)." },
+      { code: "PD / LGD / EAD", full: "Prob. of Default / Loss Given Default / Exposure", cat: "credit", desc: "Core SLFRS 9 parameters: ECL = PD × LGD × EAD adjusted for Economic Factor Adjustment (EFA) overlays." },
+      { code: "EFA", full: "Economic Factor Adjustment", cat: "credit", desc: "Macroeconomic weightings (GDP, inflation, rates) applied to baseline PD/LGD in COCR's collective impairment model (Note 3.1.8)." },
+      { code: "LTV", full: "Loan-to-Value Ratio", cat: "credit", desc: "Loan or lease principal divided by the appraised market value of the underlying vehicle or pledged gold collateral." },
+      { code: "CAR", full: "Capital Adequacy Ratio", cat: "reg", desc: "Regulatory capital divided by Risk-Weighted Assets under CBSL Direction No. 03 of 2018 (COCR Total CAR: 28.05% vs 14.0% min)." },
+      { code: "Tier 1 / CET1", full: "Core Tier 1 Regulatory Capital", cat: "reg", desc: "Permanent stated capital and retained earnings less goodwill/intangibles (COCR Tier 1: 27.02% vs 10.0% minimum)." },
+      { code: "Tier 2", full: "Supplementary Regulatory Capital", cat: "reg", desc: "Approved subordinated term debt and general provisions (includes APIIT LKR 1.5 Bn loan + Oct 2026 LKR 1.0 Bn loan)." },
+      { code: "VAT on FS", full: "VAT on Financial Services (18%)", cat: "reg", desc: "18% tax levied on value addition (Operating Profit before VAT + Personnel Cost) of banks and NBFIs in Sri Lanka." },
+      { code: "SSCL", full: "Social Security Contribution Levy (2.5%)", cat: "reg", desc: "2.5% levy on financial services value addition enacted under Act No. 25 of 2022 (cost COCR LKR 463.15 Mn in FY26)." },
+      { code: "CBSL / LFC", full: "Central Bank of SL / Licensed Finance Co.", cat: "reg", desc: "COCR is regulated by the Department of Supervision of Non-Bank Financial Institutions (NBFIs) of the CBSL under Act No. 42 of 2011." },
+      { code: "FVOCI / FVTPL", full: "Fair Value Through OCI / Profit or Loss", cat: "reg", desc: "SLFRS 9 classification for investment securities (e.g. 19.9% Mega Pay unquoted equity is held at FVOCI: LKR 203 Mn)." },
+      { code: "RPT / KMP", full: "Related Party Transaction / Key Mgmt Personnel", cat: "reg", desc: "Disclosures under LKAS 24 (Note 53), including transactions with BG Investments, TVS Lanka, APIIT, and Board Directors." },
+      { code: "DPD", full: "Days Past Due", cat: "credit", desc: "Number of days a borrower's scheduled lease or loan installment has remained unpaid past its contractual due date." }
+    ];
+
+    let currentAcronymCat = 'all';
+
+    function renderAcronyms() {
+      const query = document.getElementById('acronym-search-input').value.trim().toLowerCase();
+      const container = document.getElementById('acronym-list-container');
+      const filtered = acronymsData.filter(item => {
+        const matchesCat = (currentAcronymCat === 'all') || (item.cat === currentAcronymCat);
+        const matchesQuery = !query || item.code.toLowerCase().includes(query) || item.full.toLowerCase().includes(query) || item.desc.toLowerCase().includes(query);
+        return matchesCat && matchesQuery;
+      });
+      document.getElementById('acronym-count').textContent = filtered.length + (filtered.length === 1 ? ' Term' : ' Terms');
+      container.innerHTML = filtered.map(item => `
+        <div class="acronym-entry cat-${item.cat}">
+          <div class="acronym-top">
+            <span class="acronym-code">${item.code}</span>
+            <span class="acronym-full">${item.full}</span>
+          </div>
+          <div class="acronym-desc">${item.desc}</div>
+        </div>
+      `).join('');
+    }
+
+    function filterAcronyms() {
+      renderAcronyms();
+    }
+
+    function setAcronymCat(cat, btn) {
+      currentAcronymCat = cat;
+      document.querySelectorAll('.acronym-cat-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderAcronyms();
+    }
+
+    // =========================================================================
+    // 2. REFERENCE PRICE BASIS SWITCHER
+    // =========================================================================
+    function setPriceBasis(price, label, btn) {
+      document.querySelectorAll('.basis-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const shares = 318.074365; // Mn
+      const mcapBn = (price * shares / 1000).toFixed(2);
+      const dd = (((price - 145.25) / 145.25) * 100).toFixed(2);
+      const peFy26 = (price / 30.66).toFixed(2);
+      const pe1h27 = (price / 23.85).toFixed(2);
+      const pbv2q27 = (price / 115.97).toFixed(2);
+      const divYield = ((10.00 / price) * 100).toFixed(2);
+
+      document.getElementById('kpi-price').textContent = 'LKR ' + price.toFixed(2);
+      document.getElementById('kpi-price-sub').textContent = label;
+      document.getElementById('kpi-mcap').textContent = 'LKR ' + mcapBn + ' Bn';
+      document.getElementById('kpi-dd').textContent = dd + '%';
+      document.getElementById('kpi-pe').textContent = peFy26 + 'x / ' + pe1h27 + 'x';
+      document.getElementById('kpi-pbv').textContent = pbv2q27 + 'x';
+      document.getElementById('kpi-div').textContent = divYield + '%';
+    }
+
+    // =========================================================================
+    // 3. INTERACTIVE INWESTOUT-STYLE SVG SANKEY GENERATOR
+    // =========================================================================
+    const sankeyDatasets = {
+      '1h27': {
+        title: "1H FY2026/27 Unaudited Group Income Statement Flow (6M Ended 30 September 2026 — LKR Mn)",
+        subtitle: "Despite a -LKR 845.97 Mn Impairment Charge (vs +LKR 957.22 Mn reversal in 1H26), +10.0% NII growth (LKR 11,606.27 Mn) & TVS Lanka (+LKR 705.29 Mn) delivered LKR 3,792.28 Mn PAT (Annualized EPS: LKR 23.85)",
+        inputs: [
+          { label: "Finance Lease Revenue", val: 13184.59, color: "#D97706" },
+          { label: "Gold Loan Revenue", val: 2964.24, color: "#F59E0B" },
+          { label: "Micro, HP & Term Rev.", val: 1360.87, color: "#FBBF24" },
+          { label: "Investments & Treasury", val: 810.42, color: "#0284C7" },
+          { label: "Unallocated & Other", val: 467.64, color: "#38BDF8" }
+        ],
+        grossIncome: { label: "1H27 Gross Income", val: 18787.76 },
+        intFeeExp: { label: "Interest Expense", val: 4992.94, sub: "6M Deposit, Bank & Sub-Debt Interest (+34% YoY)" },
+        totOpInc: { label: "Total Operating Income", val: 13794.81 },
+        impairment: { label: "Impairment Charge (6M)", val: 845.97, isPositive: false, sub: "1Q27: -444.00 Mn | 2Q27: -401.97 Mn (-9.5% QoQ)" },
+        associate: { label: "TVS Lanka (19.5% Assoc.)", val: 705.29 },
+        totalPool: { label: "Total Operating + Assoc. Pool", val: 14500.10 },
+        opex: { label: "OpEx + Impairment (6M)", val: 6700.01, sub: "Personnel 2,695 | Other 2,825 | D&A 334 | Imp 846" },
+        vatSscl: { label: "VAT on FS & SSCL", val: 1665.22, sub: "Down -7.8% YoY (1Q: 837.53 | 2Q: 827.68)" },
+        incTax: { label: "Corporate Income Tax", val: 2342.59, sub: "Effective Tax Rate: 38.18% on PBT" },
+        pat: { label: "1H27 Parent PAT (6 Months)", val: 3792.28, sub: "6M EPS: LKR 11.92 (Annualized: LKR 23.85)" }
+      },
+      '2q27': {
+        title: "2Q FY2026/27 Unaudited Group Income Statement Flow (3M Ended 30 September 2026 — LKR Mn)",
+        subtitle: "2Q27 Gross Income rose +18.5% YoY to LKR 9,440.67 Mn and NII rose +10.9% YoY to LKR 5,817.97 Mn, while Impairment improved -9.5% QoQ to -LKR 401.97 Mn, yielding LKR 1,720.24 Mn PAT (EPS: LKR 5.41)",
+        inputs: [
+          { label: "Finance Lease Rev (2Q)", val: 7622.88, color: "#D97706" },
+          { label: "Gold Loan Rev (2Q)", val: 1294.99, color: "#F59E0B" },
+          { label: "Micro & SME Rev (2Q)", val: 473.88, color: "#FBBF24" },
+          { label: "Other Segments & Fees", val: 48.92, color: "#0284C7" }
+        ],
+        grossIncome: { label: "2Q27 Gross Income", val: 9440.67 },
+        intFeeExp: { label: "2Q Interest Expense", val: 2554.96, sub: "Up +4.8% QoQ on +LKR 3.31 Bn deposit inflow" },
+        totOpInc: { label: "2Q Operating Income", val: 6885.71 },
+        impairment: { label: "2Q Impairment Charge", val: 401.97, isPositive: false, sub: "Improved -9.5% QoQ vs 1Q27 (-444.00 Mn)" },
+        associate: { label: "TVS Lanka (2Q Share)", val: 311.72 },
+        totalPool: { label: "2Q Operating + Assoc. Pool", val: 7197.43 },
+        opex: { label: "2Q OpEx + Impairment", val: 3424.58, sub: "Personnel 1,416 | Other 1,440 | D&A 167 | Imp 402" },
+        vatSscl: { label: "2Q VAT on FS & SSCL", val: 827.68, sub: "Down -8.4% YoY vs 2Q26 (903.64 Mn)" },
+        incTax: { label: "2Q Income Tax", val: 1224.92, sub: "Up +7.7% YoY vs 2Q26 (1,137.60 Mn)" },
+        pat: { label: "2Q27 Parent PAT (3 Months)", val: 1720.24, sub: "2Q EPS: LKR 5.41 (Annualized: LKR 21.63)" }
+      },
+      fy26: {
+        title: "FY2025/26 Audited Group Income Statement Flow (12M Ended 31 March 2026 — LKR Mn)",
+        subtitle: "Notice how the +LKR 4,955.13 Mn Net Impairment Reversal flows IN as a positive credit, boosting Operating Profit before Taxes to LKR 18,108.69 Mn",
+        inputs: [
+          { label: "Lease & HP Interest", val: 18544.10, color: "#D97706" },
+          { label: "Loans & Gold Interest", val: 7470.18, color: "#F59E0B" },
+          { label: "Treasury & Placements", val: 1135.03, color: "#FBBF24" },
+          { label: "Fee & Comm. Income", val: 2775.05, color: "#0284C7" },
+          { label: "Other Op. & Inv. Prop.", val: 1465.96, color: "#38BDF8" }
+        ],
+        grossIncome: { label: "Gross Income", val: 31390.32 },
+        intFeeExp: { label: "Interest & Fee Expense", val: 8186.64, sub: "Deposits 5,736 | Banks 2,221 | Deb/Oth 230" },
+        totOpInc: { label: "Total Operating Income", val: 23203.68 },
+        impairment: { label: "Impairment REVERSAL (Credit)", val: 4955.13, isPositive: true, sub: "Lease +4,347 | Loan +636 | Oth -28" },
+        associate: { label: "TVS Lanka (19.5% Assoc.)", val: 804.96 },
+        totalPool: { label: "Net Operating + Assoc. Pool", val: 28963.77 },
+        opex: { label: "Operating Expenses", val: 10050.12, sub: "Personnel 4,424 | Other OpEx 5,042 | D&A 584" },
+        vatSscl: { label: "VAT on FS & SSCL", val: 3797.84, sub: "VAT on FS 3,334.69 | SSCL 463.15" },
+        incTax: { label: "Corporate Income Tax", val: 5362.99, sub: "Effective Tax Rate: 35.32%" },
+        pat: { label: "Parent Profit After Tax (PAT)", val: 9752.82, sub: "100% Parent Attributable | Basic EPS: LKR 30.66" }
+      },
+      '1q27': {
+        title: "1Q FY2026/27 Unaudited Group Income Statement Flow (3M Ended 30 June 2026 — LKR Mn)",
+        subtitle: "Impairment returns to a normal -LKR 444.00 Mn charge, yet Core NII (LKR 5,788.30 Mn) and Associate TVS Lanka (+LKR 393.57 Mn) deliver LKR 2,072.04 Mn Quarterly PAT",
+        inputs: [
+          { label: "Finance Lease Revenue", val: 5561.71, color: "#D97706" },
+          { label: "Pawning / Gold Revenue", val: 1669.25, color: "#F59E0B" },
+          { label: "Term, Micro & HP Int.", val: 995.32, color: "#FBBF24" },
+          { label: "Fee & Comm. Income", val: 705.90, color: "#0284C7" },
+          { label: "Other Operating Inc.", val: 414.91, color: "#38BDF8" }
+        ],
+        grossIncome: { label: "1Q27 Gross Income", val: 9347.09 },
+        intFeeExp: { label: "Interest Expense", val: 2437.98, sub: "Deposit & Bank Borrowing Interest (3M)" },
+        totOpInc: { label: "Total Operating Income", val: 6909.10 },
+        impairment: { label: "Impairment Charge (Outflow)", val: 444.00, isPositive: false, sub: "Normalized 1.8% Annualized Cost of Risk" },
+        associate: { label: "TVS Lanka (19.5% Assoc.)", val: 393.57 },
+        totalPool: { label: "Total Operating + Assoc. Pool", val: 7302.67 },
+        opex: { label: "Operating Expenses (+ Imp.)", val: 3303.43, sub: "Personnel 1,279 | Other 1,385 | D&A 167 | Imp 444" },
+        vatSscl: { label: "VAT on FS & SSCL", val: 837.53, sub: "VAT on FS 735.40 | SSCL 102.14" },
+        incTax: { label: "Corporate Income Tax", val: 1117.67, sub: "Effective Tax Rate: 35.04%" },
+        pat: { label: "1Q27 Parent PAT (3 Months)", val: 2072.04, sub: "1Q EPS: LKR 6.51 (Annualized: LKR 26.06)" }
+      },
+      fy25: {
+        title: "FY2024/25 Audited Group Income Statement Flow (12M Ended 31 March 2025 — LKR Mn)",
+        subtitle: "Pre-Reversal Baseline: NII of LKR 17,884.19 Mn and -LKR 1,651.89 Mn Impairment Charge yielded LKR 6,147.09 Mn Group PAT (EPS: LKR 19.33)",
+        inputs: [
+          { label: "Lease & HP Interest", val: 19339.96, color: "#D97706" },
+          { label: "Loans & Gold Interest", val: 6532.00, color: "#F59E0B" },
+          { label: "Treasury & Placements", val: 1465.90, color: "#FBBF24" },
+          { label: "Fee & Comm. Income", val: 2722.37, color: "#0284C7" },
+          { label: "Other Op. & Inv. Prop.", val: 1643.24, color: "#38BDF8" }
+        ],
+        grossIncome: { label: "FY25 Gross Income", val: 31703.47 },
+        intFeeExp: { label: "Interest & Fee Expense", val: 9531.35, sub: "Deposits 7,610 | Banks 1,613 | Deb/Oth 308" },
+        totOpInc: { label: "Total Operating Income", val: 22165.12 },
+        impairment: { label: "Impairment Charge (Outflow)", val: 1651.89, isPositive: false, sub: "Loans 830.89 | Leases 817.62 | Oth 3.38" },
+        associate: { label: "TVS Lanka (19.5% Assoc.)", val: 322.12 },
+        totalPool: { label: "Total Operating + Assoc. Pool", val: 22487.24 },
+        opex: { label: "OpEx + Impairment Charge", val: 10340.68, sub: "OpEx 8,688.79 + Impairment Charge 1,651.89" },
+        vatSscl: { label: "VAT on FS & SSCL", val: 2524.91, sub: "VAT on FS 2,217.00 | SSCL 307.92" },
+        incTax: { label: "Corporate Income Tax", val: 3474.57, sub: "Effective Tax Rate: 35.66%" },
+        pat: { label: "FY25 Parent PAT", val: 6147.09, sub: "100% Parent Attributable | Basic EPS: LKR 19.33" }
+      }
+    };
+
+    function fmtNum(n) {
+      return n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    }
+
+    function renderSankey(periodKey, btn) {
+      if (btn) {
+        btn.parentElement.querySelectorAll('.sw-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      }
+      const d = sankeyDatasets[periodKey];
+      const container = document.getElementById('sankey-container');
+
+      const svgW = 1270;
+      const svgH = 500;
+      const totalGross = d.grossIncome.val;
+      const scaleLeft = 300 / totalGross;
+
+      let curYLeft = 65;
+      let curYGrossIn = 95;
+      let leftNodesHtml = '';
+      let leftLinksHtml = '';
+
+      d.inputs.forEach((inp) => {
+        const h = Math.max(16, inp.val * scaleLeft);
+        const linkY1 = curYLeft + h / 2;
+        const linkY2 = curYGrossIn + h / 2;
+        leftLinksHtml += `<path d="M 238 ${linkY1} C 350 ${linkY1}, 350 ${linkY2}, 460 ${linkY2}" stroke="${inp.color}" stroke-width="${Math.max(6, h * 0.85)}" stroke-opacity="0.32" fill="none" />`;
+        leftNodesHtml += `
+          <rect x="220" y="${curYLeft}" width="18" height="${h}" rx="3" fill="${inp.color}" />
+          <text x="210" y="${curYLeft + h/2 - 2}" text-anchor="end" font-size="12.5" font-weight="700" fill="#0F172A">${inp.label}</text>
+          <text x="210" y="${curYLeft + h/2 + 13}" text-anchor="end" font-family="IBM Plex Mono" font-size="11.5" fill="#475569">LKR ${fmtNum(inp.val)} Mn</text>
+        `;
+        curYLeft += h + 18;
+        curYGrossIn += h;
+      });
+
+      const grossH = curYGrossIn - 95;
+      const intExpH = Math.max(28, d.intFeeExp.val * scaleLeft);
+      const totOpH = Math.max(60, grossH - intExpH);
+
+      const intY1 = 95 + intExpH / 2;
+      const opY1 = 95 + intExpH + totOpH / 2;
+
+      const rightOutputs = [
+        { label: d.intFeeExp.label, val: d.intFeeExp.val, sub: d.intFeeExp.sub, color: "#64748B", y: 62, h: 48 },
+        { label: d.opex.label, val: d.opex.val, sub: d.opex.sub, color: "#94A3B8", y: 142, h: 66 },
+        { label: d.vatSscl.label, val: d.vatSscl.val, sub: d.vatSscl.sub, color: "#DC2626", y: 238, h: 42 },
+        { label: d.incTax.label, val: d.incTax.val, sub: d.incTax.sub, color: "#B91C1C", y: 308, h: 48 },
+        { label: d.pat.label, val: d.pat.val, sub: d.pat.sub, color: "#0D9488", y: 386, h: 78 }
+      ];
+
+      let rightNodesHtml = '';
+      rightOutputs.forEach(ro => {
+        rightNodesHtml += `
+          <rect x="890" y="${ro.y}" width="20" height="${ro.h}" rx="3" fill="${ro.color}" />
+          <text x="920" y="${ro.y + ro.h/2 - 8}" font-size="13.5" font-weight="700" fill="${ro.color === '#0D9488' ? '#0F766E' : '#0F172A'}">${ro.label}</text>
+          <text x="920" y="${ro.y + ro.h/2 + 9}" font-family="IBM Plex Mono" font-size="13" font-weight="700" fill="#111827">LKR ${fmtNum(ro.val)} Mn</text>
+          <text x="920" y="${ro.y + ro.h/2 + 24}" font-family="IBM Plex Mono" font-size="10.8" fill="#64748B">${ro.sub}</text>
+        `;
+      });
+
+      const impBadgeHtml = d.impairment.isPositive ? `
+        <rect x="520" y="395" width="160" height="48" rx="5" fill="#DCFCE7" stroke="#15803D" stroke-width="2"/>
+        <text x="600" y="414" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14532D">+ECL REVERSAL CREDIT</text>
+        <text x="600" y="432" text-anchor="middle" font-family="IBM Plex Mono" font-size="12.5" font-weight="700" fill="#15803D">+LKR ${fmtNum(d.impairment.val)} Mn</text>
+        <path d="M 680 419 C 700 419, 695 330, 715 310" stroke="#15803D" stroke-width="14" stroke-opacity="0.35" fill="none" />
+      ` : `
+        <rect x="520" y="395" width="160" height="48" rx="5" fill="#FEE2E2" stroke="#B91C1C" stroke-width="1.5"/>
+        <text x="600" y="414" text-anchor="middle" font-size="11.5" font-weight="700" fill="#991B1B">IMPAIRMENT CHARGE</text>
+        <text x="600" y="432" text-anchor="middle" font-family="IBM Plex Mono" font-size="12" font-weight="700" fill="#B91C1C">-LKR ${fmtNum(d.impairment.val)} Mn</text>
+      `;
+
+      container.innerHTML = `
+        <div style="margin-bottom: 12px; border-bottom: 1px solid #E2E8F0; padding-bottom: 10px;">
+          <div style="font-family: 'Newsreader', serif; font-size: 20px; font-weight: 700; color: #0F172A;">${d.title}</div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: #475569; margin-top: 3px;">${d.subtitle}</div>
+        </div>
+        <svg viewBox="-15 0 ${svgW} ${svgH}" xmlns="http://www.w3.org/2000/svg" style="width: 100%; min-width: 820px; height: auto; display: block; font-family: 'Plus Jakarta Sans', sans-serif;">
+          ${leftLinksHtml}
+          ${leftNodesHtml}
+
+          <!-- Gross Income Bar -->
+          <rect x="460" y="95" width="22" height="${grossH}" rx="4" fill="#0F172A" />
+          <text x="471" y="70" text-anchor="middle" font-size="13" font-weight="700" fill="#0F172A">${d.grossIncome.label}</text>
+          <text x="471" y="86" text-anchor="middle" font-family="IBM Plex Mono" font-size="12.5" font-weight="700" fill="#D97706">LKR ${fmtNum(d.grossIncome.val)} Mn</text>
+
+          <!-- Flow from Gross Income to Interest Expense -->
+          <path d="M 482 ${intY1} C 650 ${intY1}, 720 86, 890 86" stroke="#64748B" stroke-width="${Math.max(12, intExpH * 0.7)}" stroke-opacity="0.3" fill="none" />
+
+          <!-- Flow from Gross Income to Operating Pool -->
+          <path d="M 482 ${opY1} C 590 ${opY1}, 610 250, 715 250" stroke="#0284C7" stroke-width="${Math.max(24, totOpH * 0.75)}" stroke-opacity="0.28" fill="none" />
+
+          <!-- Associate TVS Lanka Input Box -->
+          <rect x="520" y="450" width="160" height="42" rx="5" fill="#F0FDF4" stroke="#0D9488" stroke-width="1.5"/>
+          <text x="600" y="468" text-anchor="middle" font-size="11.5" font-weight="700" fill="#0F766E">${d.associate.label}</text>
+          <text x="600" y="484" text-anchor="middle" font-family="IBM Plex Mono" font-size="12" font-weight="700" fill="#15803D">+LKR ${fmtNum(d.associate.val)} Mn</text>
+          <path d="M 680 471 C 702 471, 700 355, 715 340" stroke="#0D9488" stroke-width="10" stroke-opacity="0.35" fill="none" />
+
+          ${impBadgeHtml}
+
+          <!-- Operating Pool Bar -->
+          <rect x="715" y="135" width="22" height="230" rx="4" fill="#0D9488" />
+          <text x="726" y="110" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0F766E">${d.totOpInc.label}</text>
+          <text x="726" y="126" text-anchor="middle" font-family="IBM Plex Mono" font-size="12" font-weight="700" fill="#0F172A">LKR ${fmtNum(d.totOpInc.val)} Mn</text>
+
+          <!-- Flows from Operating Pool to Right Outputs -->
+          <path d="M 737 175 C 810 175, 820 175, 890 175" stroke="#94A3B8" stroke-width="44" stroke-opacity="0.35" fill="none" />
+          <path d="M 737 235 C 810 235, 820 259, 890 259" stroke="#DC2626" stroke-width="26" stroke-opacity="0.28" fill="none" />
+          <path d="M 737 278 C 810 278, 820 332, 890 332" stroke="#B91C1C" stroke-width="34" stroke-opacity="0.30" fill="none" />
+          <path d="M 737 332 C 810 332, 820 425, 890 425" stroke="#0D9488" stroke-width="58" stroke-opacity="0.38" fill="none" />
+
+          ${rightNodesHtml}
+        </svg>
+      `;
+    }
+
+    // =========================================================================
+    // 4. INTERACTIVE VALUATION CALCULATOR
+    // =========================================================================
+    let currentTermG = 5.0;
+
+    function updateValuationModel() {
+      const roe = parseFloat(document.getElementById('sl-roe').value);
+      const ke = parseFloat(document.getElementById('sl-ke').value);
+      const disc = parseFloat(document.getElementById('sl-disc').value);
+      const g = currentTermG;
+      const navps = 117.56; // 1Q27 Group NAVPS
+
+      document.getElementById('lbl-roe').textContent = roe.toFixed(1) + '%';
+      document.getElementById('lbl-ke').textContent = ke.toFixed(1) + '%';
+      document.getElementById('lbl-g').textContent = 'g: ' + g.toFixed(1) + '% | Disc: ' + disc.toFixed(1) + '%';
+
+      const rawMult = Math.max(0.4, (roe - g) / (ke - g));
+      const rawVal = navps * rawMult;
+      const tvsUplift = 16.80; // Look-through value of 19.5% TVS Lanka above equity book value
+      const blendedPreDisc = (rawVal * 0.88) + ((rawVal + tvsUplift) * 0.12) + (tvsUplift * 0.85);
+      const finalVal = blendedPreDisc * (1 - disc / 100);
+
+      const up120 = (((finalVal - 120.00) / 120.00) * 100).toFixed(1);
+      const up90 = (((finalVal - 90.20) / 90.20) * 100).toFixed(1);
+
+      document.getElementById('val-raw-price').textContent = 'LKR ' + rawVal.toFixed(2);
+      document.getElementById('val-raw-mult').innerHTML = `Justified Multiple: <strong>${rawMult.toFixed(2)}x</strong> Book Value (1Q27 Group NAVPS of LKR 117.56). Implies P/E of <strong>${(rawVal / 26.06).toFixed(2)}x</strong> on 1Q27 annualized EPS.`;
+
+      document.getElementById('val-final-price').textContent = 'LKR ' + finalVal.toFixed(2);
+      document.getElementById('val-final-upside').innerHTML = `<strong>${up120 >= 0 ? '+' : ''}${up120}%</strong> vs. LKR 120.00 (1Q27 Close) | <strong>${up90 >= 0 ? '+' : ''}${up90}%</strong> vs. LKR 90.20 (Oct 2026 Spot) + 8.3%–11.1% Dividend Yield.`;
+    }
+
+    function setValPreset(roe, ke, g, disc, btn) {
+      if (btn) {
+        btn.parentElement.querySelectorAll('.sw-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      }
+      currentTermG = g;
+      document.getElementById('sl-roe').value = roe;
+      document.getElementById('sl-ke').value = ke;
+      document.getElementById('sl-disc').value = disc;
+      updateValuationModel();
+    }
+
+    // =========================================================================
+    // 5. INITIALIZE CHART.JS CHARTS ON LOAD
+    // =========================================================================
+    window.addEventListener('DOMContentLoaded', () => {
+      renderAcronyms();
+      renderSankey('1h27', null);
+      updateValuationModel();
+
+      Chart.defaults.font.family = "'IBM Plex Mono', monospace";
+      Chart.defaults.font.size = 12;
+      Chart.defaults.color = '#334155';
+
+      // Chart 1: 10-Year Trajectory
+      new Chart(document.getElementById('chartTenYear'), {
+        type: 'bar',
+        data: {
+          labels: ['FY16/17', 'FY17/18', 'FY18/19', 'FY19/20', 'FY20/21', 'FY21/22', 'FY22/23', 'FY23/24', 'FY24/25', 'FY25/26', '1Q26/27 (Ann.)'],
+          datasets: [
+            {
+              type: 'line',
+              label: 'Group NAVPS (LKR)',
+              data: [32.33, 36.68, 39.89, 42.19, 47.83, 60.34, 62.64, 76.60, 89.61, 114.04, 117.56],
+              borderColor: '#0F172A',
+              backgroundColor: '#0F172A',
+              borderWidth: 2.5,
+              tension: 0.25,
+              yAxisID: 'y'
+            },
+            {
+              type: 'line',
+              label: 'Period-End Share Price (LKR)',
+              data: [41.60, 46.80, 29.80, 18.80, 22.00, 26.20, 26.00, 35.30, 56.40, 110.00, 120.00],
+              borderColor: '#D97706',
+              backgroundColor: '#D97706',
+              borderWidth: 3,
+              borderDash: [5, 3],
+              tension: 0.25,
+              yAxisID: 'y'
+            },
+            {
+              type: 'bar',
+              label: 'Basic EPS (LKR / Share)',
+              data: [9.17, 7.62, 6.51, 5.19, 7.25, 14.21, 6.80, 13.69, 19.33, 30.66, 26.06],
+              backgroundColor: 'rgba(13, 148, 136, 0.78)',
+              borderColor: '#0D9488',
+              borderWidth: 1,
+              borderRadius: 4,
+              yAxisID: 'y1'
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          interaction: { mode: 'index', intersect: false },
+          scales: {
+            y: {
+              type: 'linear',
+              position: 'left',
+              title: { display: true, text: 'Share Price & NAVPS (LKR)' },
+              grid: { color: '#E2E8F0' }
+            },
+            y1: {
+              type: 'linear',
+              position: 'right',
+              title: { display: true, text: 'Basic EPS (LKR / Share)' },
+              grid: { drawOnChartArea: false },
+              min: 0,
+              max: 36
+            }
+          }
+        }
+      });
+
+      // Chart 2: Earnings Quality Bridge
+      new Chart(document.getElementById('chartEarningsQuality'), {
+        type: 'bar',
+        data: {
+          labels: ['FY22/23 Audited', 'FY23/24 Audited', 'FY24/25 Audited', 'FY25/26 Audited', '1Q FY26/27 (3M Actual)'],
+          datasets: [
+            {
+              label: 'Pre-Impairment Core Operating Profit (LKR Mn)',
+              data: [9112.40, 8154.20, 13476.33, 13153.56, 4049.67],
+              backgroundColor: '#0284C7',
+              borderRadius: 4
+            },
+            {
+              label: 'Impairment (Charge) / Reversal Credit (LKR Mn)',
+              data: [-3422.54, -885.31, -1651.89, 4955.13, -444.00],
+              backgroundColor: (ctx) => ctx.raw >= 0 ? '#D97706' : '#B91C1C',
+              borderRadius: 4
+            },
+            {
+              label: 'Reported Parent PAT (LKR Mn)',
+              data: [2163.50, 4355.88, 6147.09, 9752.82, 2072.04],
+              backgroundColor: '#0D9488',
+              borderRadius: 4
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          interaction: { mode: 'index', intersect: false },
+          scales: {
+            y: {
+              title: { display: true, text: 'LKR Millions' },
+              grid: { color: '#E2E8F0' }
+            }
+          }
+        }
+      });
+
+      // Chart 3: Funding Mix Evolution
+      new Chart(document.getElementById('chartFundingMix'), {
+        type: 'bar',
+        data: {
+          labels: ['FY22/23', 'FY23/24', 'FY24/25', 'FY25/26', '1Q FY26/27'],
+          datasets: [
+            {
+              label: 'Customer Deposits (LKR Mn)',
+              data: [59244.15, 62120.89, 55681.78, 55202.70, 57068.09],
+              backgroundColor: '#0F172A'
+            },
+            {
+              label: 'Bank Borrowings & Sub. Debt (LKR Mn)',
+              data: [16260.34, 13859.12, 17911.78, 31009.05, 27157.10],
+              backgroundColor: '#D97706'
+            },
+            {
+              label: 'Shareholders Equity (LKR Mn)',
+              data: [19923.41, 24364.88, 28502.16, 36274.42, 37392.23],
+              backgroundColor: '#0D9488'
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            x: { stacked: true },
+            y: { stacked: true, title: { display: true, text: 'LKR Millions' } }
+          }
+        }
+      });
+
+      // Chart 4: Gross Credit Portfolio by Stage & Product
+      new Chart(document.getElementById('chartPortfolioMix'), {
+        type: 'doughnut',
+        data: {
+          labels: [
+            'Finance Leases — Net (LKR 65.62 Bn)',
+            'Gold Loans — Gross (LKR 25.85 Bn)',
+            'Term, Micro & Factoring Loans — Net (LKR 7.50 Bn)',
+            'Stage 3 ECL Allowance Buffer (LKR 3.67 Bn)',
+            'Stage 1 & 2 ECL Allowance (LKR 1.19 Bn)'
+          ],
+          datasets: [{
+            data: [65619.97, 25851.00, 7499.95, 3670.67, 1192.91],
+            backgroundColor: ['#0F172A', '#D97706', '#0284C7', '#B91C1C', '#0D9488'],
+            borderWidth: 2,
+            borderColor: '#FFFFFF'
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { position: 'right', labels: { boxWidth: 14, font: { size: 11.5 } } }
+          }
+        }
+      });
+
+      // Chart 5: Peer Valuation Scatter (ROE vs P/BV)
+      new Chart(document.getElementById('chartPeerMatrix'), {
+        type: 'scatter',
+        data: {
+          datasets: [
+            {
+              label: 'COCR @ LKR 120.00 (1Q27 Close — Norm. ROE 22.5%)',
+              data: [{ x: 22.5, y: 1.02 }],
+              backgroundColor: '#D97706',
+              borderColor: '#0F172A',
+              borderWidth: 2,
+              pointRadius: 10
+            },
+            {
+              label: 'COCR @ LKR 90.20 (Oct 2026 Spot — Norm. ROE 22.5%)',
+              data: [{ x: 22.5, y: 0.77 }],
+              backgroundColor: '#15803D',
+              borderColor: '#0F172A',
+              borderWidth: 2,
+              pointRadius: 11
+            },
+            {
+              label: 'COCR @ LKR 120.00 (FY26 Audited ROE 30.1%)',
+              data: [{ x: 30.09, y: 1.05 }],
+              backgroundColor: '#F59E0B',
+              pointRadius: 8
+            },
+            {
+              label: 'LFIN.N0000 (LB Finance)',
+              data: [{ x: 27.8, y: 1.34 }],
+              backgroundColor: '#0F172A',
+              pointRadius: 8
+            },
+            {
+              label: 'VFIN.N0000 (Vallibel Finance)',
+              data: [{ x: 23.5, y: 1.16 }],
+              backgroundColor: '#0284C7',
+              pointRadius: 8
+            },
+            {
+              label: 'LOFC.N0000 (LOLC Finance)',
+              data: [{ x: 20.8, y: 0.80 }],
+              backgroundColor: '#64748B',
+              pointRadius: 8
+            },
+            {
+              label: 'CDB.N0000 (Citizens Dev. Business Finance)',
+              data: [{ x: 17.5, y: 0.96 }],
+              backgroundColor: '#7C3AED',
+              pointRadius: 8
+            },
+            {
+              label: 'CFIN.N0000 (Central Finance)',
+              data: [{ x: 15.2, y: 0.62 }],
+              backgroundColor: '#475569',
+              pointRadius: 8
+            },
+            {
+              label: 'PLC.N0000 (Peoples Leasing)',
+              data: [{ x: 11.5, y: 0.77 }],
+              backgroundColor: '#DC2626',
+              pointRadius: 8
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            x: {
+              title: { display: true, text: 'Return on Equity — ROE (%)' },
+              min: 8,
+              max: 33,
+              grid: { color: '#E2E8F0' }
+            },
+            y: {
+              title: { display: true, text: 'Price-to-Book Value — P/BV (x)' },
+              min: 0.4,
+              max: 1.55,
+              grid: { color: '#E2E8F0' }
+            }
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
